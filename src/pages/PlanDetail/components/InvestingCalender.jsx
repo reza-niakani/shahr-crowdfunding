@@ -18,7 +18,7 @@ function InvestingCalender({ id, padding = true }) {
     <div
       className={`w-full h-auto flex flex-col items-center justify-between gap-y-5  ${
         padding ? 'lg:py-8 py-5 ' : ''
-      }   text-gray-main `}>
+      }   text-gray-700 `}>
       {' '}
       <span className="text-start w-[90%] font-semibold lg:text-lg text-base  ">
         تقویم سرمایه گذاری
@@ -35,20 +35,20 @@ function InvestingCalender({ id, padding = true }) {
                   type="checkbox"
                   disabled
                   readOnly
-                  className={`focus:outline-none focus:ring-0 text-accent-600 rounded-full lg:w-6 w-4 lg:h-6 h-4 border ${
-                    item?.status ? ' border-accent-600' : ' border-gray-main'
+                  className={`focus:outline-none focus:ring-0 text-accent-1000 rounded-full lg:w-6 w-4 lg:h-6 h-4 border ${
+                    item?.status ? ' border-accent-1000' : ' border-gray-700'
                   }`}
                 />
 
                 {index !== calender?.length - 1 && (
                   <div
                     className={`h-auto min-h-6   flex flex-grow border-r ${
-                      item?.status ? 'border-accent-600' : 'border-gray-main'
+                      item?.status ? 'border-accent-1000' : 'border-gray-500'
                     }`}
                   />
                 )}
               </div>
-              <div className="w-full flex justify-between items-center h-6 gap-x-2 lg:text-sm text-xs text-gray-main lg:font-medium">
+              <div className="w-full flex justify-between items-center h-6 gap-x-2 lg:text-sm text-xs text-gray-700 lg:font-medium">
                 <span className={`w-auto text-start     `}>{item?.title}</span>{' '}
                 <span className={`w-auto  text-start   `}>
                   {item?.date && DateFunctions.getDate(item?.date)}
@@ -58,7 +58,7 @@ function InvestingCalender({ id, padding = true }) {
           ))}
         </div>
       ) : (
-        <span className="text-base w-full font-medium text-center text-gray-main py-5">
+        <span className="text-base w-full font-medium text-center text-gray-700 py-5">
           تقویمی مشخص نشده است!{' '}
         </span>
       )}

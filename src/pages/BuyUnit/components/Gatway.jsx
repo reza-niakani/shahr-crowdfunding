@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 function Gatway({ setStep, data, amount, showName }) {
   const [disable, setDisable] = useState(false);
   const [token, setToken] = useState();
+  const [nationalCode, setNationalCode] = useState();
   const [paymentRes, setPaymentRes] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorText, setErrorText] = useState('');
@@ -34,8 +35,8 @@ function Gatway({ setStep, data, amount, showName }) {
 
   const CreatePayment = async (numberId) =>
     await Axios.post('/Payment/Create', {
-      gatewayId: 3,
-      returnUrl: `https://crowd.zagrosam.com${pathname}${search}`,
+      gatewayId: 4,
+      returnUrl: `http://shahrcrowd.ir${pathname}${search}`,
       amount: amount,
       walletFlowId: numberId
     })
@@ -55,14 +56,17 @@ function Gatway({ setStep, data, amount, showName }) {
       });
       if (res?.data?.walletFlowId) {
         const paymentRes = await CreatePayment(res.data.walletFlowId);
+        console.log('response', paymentRes);
 
         if (paymentRes) {
           setToken(paymentRes?.token);
+          setNationalCode(paymentRes?.encryptedNationalCode);
           setPaymentRes(paymentRes);
           setDisable(false);
         } else {
           setDisable(true);
-          console.log('Payment was unsuccessful.');
+          setErrorText('خطا! لطفا زمانی دیگر تلاش کنید ');
+          console.log('Payment was unsuccessful.', paymentRes);
         }
       }
     } catch (error) {
@@ -79,86 +83,93 @@ function Gatway({ setStep, data, amount, showName }) {
     }
   };
 
-  const handlePayment = async () => {
-    const paymentUrl = paymentRes?.paymentUrl;
+  const handlePayment = () => {
+    // if (!accessToken || !selectedFund) return;
+    // console.log(' token', token, 'nationalCode', nationalCode);
+
     // Create the form
     const formElement = document.createElement('form');
     formElement.setAttribute('method', 'post');
-    formElement.setAttribute('action', paymentUrl);
+    formElement.setAttribute('action', 'https://sepehr.shaparak.ir:8080/Pay');
+    // formElement.setAttribute('target', '_blank');
 
-    // Create the second input field for language
-    const inputElement = document.createElement('input');
-    inputElement.setAttribute('type', 'text');
-    inputElement.setAttribute('name', 'language');
-    inputElement.setAttribute('value', 'fa');
+    // TerminalID input
+    const terminalInput = document.createElement('input');
+    terminalInput.setAttribute('type', 'text');
+    terminalInput.setAttribute('name', 'TerminalID');
+    terminalInput.setAttribute('value', '99101358');
 
-    // Create the third input field for language
-    const inputElement2 = document.createElement('input');
-    inputElement2.setAttribute('type', 'hidden');
-    inputElement2.setAttribute('name', 'Token');
-    inputElement2.setAttribute('value', token);
+    // token input
+    const tokenInput = document.createElement('input');
+    tokenInput.setAttribute('type', 'text');
+    tokenInput.setAttribute('name', 'token');
+    tokenInput.setAttribute('value', token);
 
-    // Create the forth unknow
-    const inputElement3 = document.createElement('input');
-    inputElement3.setAttribute('type', 'text');
-    inputElement3.setAttribute('name', 'GetMethod');
-    inputElement3.setAttribute('value', '');
+    // nationalCode input
+    const nationalCodeInput = document.createElement('input');
+    nationalCodeInput.setAttribute('type', 'text');
+    nationalCodeInput.setAttribute('name', 'nationalCode');
+    nationalCodeInput.setAttribute('value', nationalCode);
 
     // Append inputs to form
-    formElement.appendChild(inputElement);
-    formElement.appendChild(inputElement2);
-    formElement.appendChild(inputElement3);
+    formElement.appendChild(terminalInput);
+    formElement.appendChild(tokenInput);
+    formElement.appendChild(nationalCodeInput);
+    // formElement.appendChild(nationalCodeInput);
+
+    // Append form to body
     document.body.appendChild(formElement);
 
     // Submit the form
     formElement.submit();
   };
+
   return (
     <div className="w-full flex flex-col items-center justify-start min-h-[400px] lg:mt-8b mt-2 gap-y-6">
-      <span className=" w-full text-start  text-gray-main  text-sm font-semibold">
+      <span className=" w-full text-start  text-gray-700  text-sm font-semibold">
         {' '}
         اطلاعات سفارش{' '}
       </span>
       <div className="w-full flex flex-wrap justify-between items-center border border-gray-400 rounded-md px-3 min-h-[42px] h-auto py-2 ">
-        <span className=" text-start  text-sm font-medium text-gray-main ">نام طرح :</span>
-        <span className=" text-end  text-sm font-semibold text-gray-main ">{data?.title} </span>
+        <span className=" text-start  text-sm font-medium text-gray-700 ">نام طرح :</span>
+        <span className=" text-end  text-sm font-semibold text-gray-700 ">{data?.title} </span>
       </div>
       <div className="w-full flex flex-wrap justify-between items-center border border-gray-400 rounded-md px-3 min-h-[42px] h-auto py-2 ">
         <span
           className={` text-start ${
             calculateClearAmountAsPay()?.status ? 'text-xs ' : ' text-sm'
-          } font-medium text-gray-main `}>
+          } font-medium text-gray-700 `}>
           {' '}
           {calculateClearAmountAsPay()?.text}
         </span>
-        <span className=" text-end  text-sm font-semibold text-gray-main ">
+        <span className=" text-end  text-sm font-semibold text-gray-700 ">
           {calculateClearAmountAsPay()?.data &&
             Number(calculateClearAmountAsPay()?.data).toLocaleString()}{' '}
         </span>
       </div>
       <div className="w-full flex flex-wrap justify-between items-center border border-gray-400 rounded-md px-3 h-[42px]  ">
-        <span className=" text-start  text-sm font-medium text-gray-main ">
+        <span className=" text-start  text-sm font-medium text-gray-700 ">
           تعداد واحد درخواستی :
         </span>
-        <span className=" text-end  font-semibold text-sm  text-gray-main ">
+        <span className=" text-end  font-semibold text-sm  text-gray-700 ">
           {unitCount && Number(unitCount).toLocaleString()}{' '}
         </span>
       </div>
       {/*  buttons */}
-      {errorText && <span className=" text-start text-sm text-red-main ">{errorText}</span>}
+      {errorText && <span className=" text-start text-sm text-red-600 ">{errorText}</span>}
       <div className="w-full flex flex-wrap justify-between items-center       pt-16   ">
         {' '}
         <button
           onClick={handlePayment}
           disabled={disable}
-          className={`w-[115px] lg:h-[48px] h-[38px] ${!isLoading && 'bg-[#C9B777]'} ${
+          className={`w-[115px] lg:h-[48px] h-[38px] ${!isLoading && 'bg-accent-1000'} ${
             disable && ' opacity-60'
           } text-white text-sm font-medium rounded-md text-center flex justify-center items-center focus:outline-none focus:ring-0 focus:border-none`}>
           {isLoading ? <BouncingDotsLoader /> : 'پرداخت'}
         </button>
         <button
           onClick={() => setStep('paymethod')}
-          className={`w-[115px] lg:h-[48px] h-[38px] text-[#C9B777]  border border-[#C9B777] text-sm font-medium rounded-md text-center flex justify-center items-center focus:outline-none focus:ring-0 `}>
+          className={`w-[115px] lg:h-[48px] h-[38px] text-accent-1000  border border-accent-1000 text-sm font-medium rounded-md text-center flex justify-center items-center focus:outline-none focus:ring-0 `}>
           بازگشت{' '}
         </button>
       </div>

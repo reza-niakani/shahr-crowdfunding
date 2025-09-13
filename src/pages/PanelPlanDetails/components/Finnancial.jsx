@@ -24,7 +24,7 @@ function Finnancial({ FinnancialData }) {
           </div>
         </>
       ) : (
-        <span className="w-[50%] text-center text-sm font-bold text-[#C9B777] bg-[#01B69B08]   border border-[#C9B777] rounded-large h-[42px]  flex items-center justify-center">
+        <span className="w-[50%] text-center text-sm font-bold text-[#009085] bg-[#01B69B08]   border border-[#009085] rounded-large h-[42px]  flex items-center justify-center">
           !اطلاعاتی یافت نشد
         </span>
       )}

@@ -16,9 +16,9 @@ function SetAmount({ data, role, setStep, amount, setAmount, setShowName, showNa
       ).toLocaleString()} ) ریال`,
       color: amount
         ? amount >= minInvestment && amount <= maxInvestment
-          ? 'text-gray-main'
-          : 'text-red-main'
-        : 'text-gray-main'
+          ? 'text-gray-700'
+          : 'text-red-600'
+        : 'text-gray-700'
     };
   };
 
@@ -43,9 +43,9 @@ function SetAmount({ data, role, setStep, amount, setAmount, setShowName, showNa
     <div className="w-[90%] flex flex-col items-center justify-between h-[400px] pt-8 gap-y-5">
       {/*  input  */}
       <div className="w-full relative flex justify-start flex-col items-end gap-y-2  ">
-        <span className="text-sm text-gray-main w-full text-start ">مبلغ سرمایه گذاری</span>{' '}
+        <span className="text-sm text-gray-700 w-full text-start ">مبلغ سرمایه گذاری</span>{' '}
         <input
-          className={`w-full lg:h-[48px] h-[38px] border relative  rounded-md text-right pr-4  border-gray-800 font-light text-gray-main text-sm  focus:outline-none focus:ring-0 focus:border-[#364A87] `}
+          className={`w-full lg:h-[48px] h-[38px] border relative  rounded-md text-right pr-4  border-gray-800 font-light text-gray-700 text-sm  focus:outline-none focus:ring-0 focus:border-[#364A87] `}
           maxLength={20}
           onChange={(e) => {
             const value = e.target.value.replace(/,/g, ''); // Remove commas
@@ -57,7 +57,7 @@ function SetAmount({ data, role, setStep, amount, setAmount, setShowName, showNa
           value={amount ? Number(amount).toLocaleString() : ''}
           inputMode="numeric"
         />
-        <span className="text-gray-main text-base absolute lg:top-10 top-9 left-4 ">ریال</span>
+        <span className="text-gray-700 text-base absolute lg:top-10 top-9 left-4 ">ریال</span>
         {/* validation info */}
         <span className="w-[95%] text-start text-xs text-[#939393]">
           {' '}
@@ -71,20 +71,20 @@ function SetAmount({ data, role, setStep, amount, setAmount, setShowName, showNa
         </span>
         <span
           className={`lg:text-sm  text-xs  font-medium  w-full text-start  ${
-            amount % data?.unitAmount == 0 ? ' text-gray-main' : ' text-red-main'
+            amount % data?.unitAmount == 0 ? ' text-gray-700' : ' text-red-600'
           } `}>
           ارزش هر گواهی: {data?.unitAmount && Number(data?.unitAmount).toLocaleString()} (ریال)
         </span>{' '}
         <span
-          className={`w-full text-start  text-xs ${
-            amount % data?.unitAmount == 0 ? ' text-gray-main' : ' text-red-main'
-          }`}>
+          className={`w-full text-start  ${
+            amount % data?.unitAmount == 0 ? ' text-gray-800' : ' text-red-600'
+          } text-xs  `}>
           {' '}
           ( مبلغ سرمایه گذاری باید مضربی مبلغ هرگواهی باشد )
         </span>
         <span
           className={`lg:text-sm  text-xs  font-medium  w-full text-start  ${
-            unitCount <= (data?.unitAvailable ?? 0) ? ' text-gray-main' : ' text-red-main'
+            unitCount <= (data?.unitAvailable ?? 0) ? ' text-gray-700' : ' text-red-600'
           } `}>
           تعداد واحد باقی مانده :{' '}
           {data?.unitAvailable && Number(data?.unitAvailable).toLocaleString()}
@@ -99,9 +99,9 @@ function SetAmount({ data, role, setStep, amount, setAmount, setShowName, showNa
           onClick={() => setShowName(!showName)}
           type="checkbox"
           checked={showName}
-          className="w-4 h-4 focus:outline-none focus:ring-0  text-[#364A87] border border-[#364A87] rounded-sm "
+          className="w-4 h-4 focus:outline-none focus:ring-0  text-accent-1000 border border-accent-1000 rounded-sm "
         />
-        <span className="text-nowrap text-gray-main text-xs">
+        <span className="text-nowrap text-gray-700 text-xs">
           اجازه نمایش نام شما به عنوان سرمایه گذار این طرح{' '}
         </span>
       </div>
@@ -110,7 +110,7 @@ function SetAmount({ data, role, setStep, amount, setAmount, setShowName, showNa
         <button
           disabled={!disable}
           onClick={() => setStep('paymethod')}
-          className={`w-[115px] lg:h-[48px] h-[38px] bg-[#C9B777] ${
+          className={`w-[115px] lg:h-[48px] h-[38px] bg-accent-1000 ${
             !disable && ' opacity-60'
           } text-white text-sm font-medium rounded-md text-center flex justify-center items-center focus:outline-none focus:ring-0 focus:border-none`}>
           ادامه

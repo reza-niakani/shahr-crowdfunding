@@ -10,8 +10,8 @@
   border-radius: 50%;
   background: radial-gradient(
     100% 100% at 50% 0%,
-    rgba(228, 171, 15, 0.62) 0%,
-    rgba(88, 72, 20, 0.9) 100%
+    rgba(0, 184, 172, 0.534) 0%,
+    rgba(0, 184, 172, 0.904) 100%
   );
   opacity: 1;
   animation: bouncing-loader 0.4s infinite alternate;

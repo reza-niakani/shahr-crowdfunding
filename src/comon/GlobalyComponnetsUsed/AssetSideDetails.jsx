@@ -37,7 +37,7 @@ function AssetSideDetails() {
       {/* button */}
       <Link
         to="/all_plans"
-        className="w-full bg-white drop-shadow-md text-center flex justify-center gap-x-2 items-center rounded-b-[20px] rounded-t-md  h-[40px] text-base font-bold text-[#C9B777] ">
+        className="w-full bg-white drop-shadow-md text-center flex justify-center gap-x-2 items-center rounded-b-[20px] rounded-t-md  h-[40px] text-base font-bold text-[#009085] ">
         <InlineSVG src={dollor} />
         سرمایه گذاری
       </Link>{' '}

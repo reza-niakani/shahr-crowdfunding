@@ -5,7 +5,7 @@ import DataContext from 'comon/context/MainContext';
 import { getFromLocalStorage } from 'comon/storage/localStorage';
 import InlineSVG from 'react-inlinesvg';
 import useDeviceDetection from 'comon/DeviceDetector/useDeviceDetection';
-import mainLogo from 'asset/Pictures/logo/CompanyMainLogo.svg';
+import mainLogo from 'asset/Pictures/logo/logoalone.png';
 import HamburgerMenuIcon from 'asset/Pictures/Icons/HamburgerMenuIcon.svg';
 // import arrowDown from 'asset/Pictures/Icons/arrowDown.svg';
 
@@ -18,7 +18,7 @@ function OutNavbar() {
     // { name: 'صفحه اصلی', rout: '/', key: 'home' },
     // { name: 'صندوق های سرمایه گذاری', rout: '', key: 'investing_funds' },
     // {
-    //   name: 'خدمات مالی زاگرس',
+    //   name: 'خدمات مالی شهر',
     //   rout: '/Financial services',
     //   key: 'financial_services'
     // },
@@ -53,20 +53,24 @@ function OutNavbar() {
   return (
     <div className="lg:w-[70%] w-[90%] lg:h-[52px] h-[42px] lg:rounded-large rounded-lg bg-gray-100 flex justify-center items-center z-[100000]">
       <div className="h-full w-[95%] flex flex-nowrap justify-between items-center  ">
-        <div className=" flex w-auto lg:gap-x-4 items-center h-full">
+        <div className=" flex w-auto lg:gap-x-4 items-center h-full ">
           {/*  logo */}
-          <InlineSVG
-            onClick={() => navigate('/')}
-            src={mainLogo}
-            className="lg:w-[192px]  w-[125px] h-[35px] object-contain cursor-pointer "
-          />
+          <div className="w-auto flex justify-start items-center gap-x-2 drop-shadow-lg rounded-lg p-1">
+            {' '}
+            <img
+              onClick={() => navigate('/')}
+              src={mainLogo}
+              className="w-fit lg:h-[40px] h-[35px] object-contain cursor-pointer  object-right"
+            />
+            <span className="text-sm font-bold text-accent-main">شهر کراد</span>
+          </div>
           {navbarItem.map((item, index) => (
             <Link
               to={item.rout}
               key={index}
               className={` w-auto text-nowrap gap-x-1 lg:flex  hidden items-center text-sm  cursor-pointer ${
                 handleActivity() == item?.key
-                  ? ' text-[#C9B777] font-bold '
+                  ? ' text-[#63817f7a] font-bold '
                   : 'text-gray-main font-medium '
               }`}>
               {item.name}

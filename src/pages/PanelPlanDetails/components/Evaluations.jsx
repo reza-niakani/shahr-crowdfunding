@@ -74,21 +74,21 @@ function Evaluations({ id, warranty, EvaluationsDocs }) {
                     type="download"
                     target="_blank"
                     href={getBaseUrl() + '/' + item?.path}
-                    className=" lg:text-sm text-xs  font-bold text-end underline hover:text-green-1100 text-[#C9B777]  flex cursor-pointer justify-center items-center ">
+                    className=" lg:text-sm text-xs  font-bold text-end underline hover:text-green-1100 text-[#009085]  flex cursor-pointer justify-center items-center ">
                     دانلود
                     {/* <InlineSVG src={download} /> */}
                   </a>{' '}
                 </div>
               ))
             ) : (
-              <span className="w-[50%] text-center text-sm font-bold text-[#C9B777] bg-[#01B69B08]   border border-[#C9B777] rounded-large h-[42px]  flex items-center justify-center">
+              <span className="w-[50%] text-center text-sm font-bold text-[#009085] bg-[#01B69B08]   border border-[#009085] rounded-large h-[42px]  flex items-center justify-center">
                 ارزیابی قرار داده نشده است !
               </span>
             )}
           </div>
         </>
       ) : (
-        <span className="w-[50%] text-center text-sm font-bold text-[#C9B777] bg-[#01B69B08]   border border-[#C9B777] rounded-large h-[42px]  flex items-center justify-center">
+        <span className="w-[50%] text-center text-sm font-bold text-[#009085] bg-[#01B69B08]   border border-[#009085] rounded-large h-[42px]  flex items-center justify-center">
           !اطلاعاتی یافت نشد
         </span>
       )}

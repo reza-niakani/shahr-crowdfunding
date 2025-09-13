@@ -3,7 +3,7 @@ import React from 'react';
 
 function InvestingLimitings({ mainData }) {
   return (
-    <div className="w-full h-auto flex flex-col items-center justify-between gap-y-5  shadow-dropShadow2 lg:py-8 py-5   rounded-[20px] text-gray-main ">
+    <div className="w-full h-auto flex flex-col items-center justify-between gap-y-5  shadow-dropShadow2 lg:py-8 py-5   rounded-[20px] text-gray-700 ">
       {/* title */}
       <div className="w-[90%] flex justify-between items-center  ">
         <span className="w-[55%] text-start text-nowrap  lg:text-sm text-xs ">

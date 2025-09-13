@@ -11,6 +11,7 @@ import MainStructurePages from 'comon/pageStructures/MainStructurePages';
 import ScrollToTop from 'comon/GlobalyTools/ScrollToTop';
 import ErrorBoundary from 'comon/Routs/setting/ErrorBoundary';
 import TimeoutFallback from 'comon/Routs/setting/TimeoutFallback';
+import TitleManager from 'comon/TabTitileManager/TitileManager';
 
 function App() {
   return (
@@ -28,8 +29,7 @@ function App() {
             <ScrollToTop />
             <ErrorBoundary>
               <Suspense fallback={<TimeoutFallback />}>
-                              <TitleManager />
-
+                <TitleManager />
                 <RoutsComponent />
               </Suspense>
             </ErrorBoundary>{' '}

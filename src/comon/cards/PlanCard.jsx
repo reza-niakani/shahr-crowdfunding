@@ -41,7 +41,7 @@ function PlanCard({ data, innerCard = false, isSlider = false }) {
         <div className="w-[95%] flex items-center justify-between ">
           {' '}
           <span className="text-xs w-auto text-start text-gray-900 font-bold">
-            سکوی تامین مالی زاگرس کراد
+            سکوی تامین مالی شهر کراد
           </span>
           <span
             style={{ color: plansStatusFinder(data?.state)?.color }}
@@ -52,7 +52,7 @@ function PlanCard({ data, innerCard = false, isSlider = false }) {
         <div className="w-[90%] flex justify-between items-center">
           {' '}
           <span className="text-xs text-gray-700">نهاد مالی :</span>
-          <span className="text-xs text-gray-900 font-bold">سبدگردان زاگرس</span>
+          <span className="text-xs text-gray-900 font-bold"> کارگزاری شهر</span>
         </div>
         <span className="text-sm font-bold w-[90%] text-start text-gray-700">
           {isSlider ? (

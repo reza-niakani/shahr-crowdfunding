@@ -11,7 +11,7 @@ function StartPage({ userInfo, role }) {
       <div
         className="lg:w-[90%] w-full flex flex-col justify-center items-center gap-y-5  h-[234px] rounded-[20px]"
         style={{
-          background: 'radial-gradient(circle at center,  #C9B777 40%,  #C9B777 100%)'
+          background: 'radial-gradient(circle at center,  #009085 40%,  #009085 100%)'
         }}>
         <InlineSVG src={icon} />
         {/*  name  */}

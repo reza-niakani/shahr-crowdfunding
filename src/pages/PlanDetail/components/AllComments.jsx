@@ -63,7 +63,7 @@ function AllComments() {
                 </div>
                 <div className=" flex w-auto items-center lg:flex-row flex-col  gap-x-3  justify-start ">
                   {' '}
-                  <span className=" text-sm  w-fit text-gray-main ">{item?.user}</span>
+                  <span className=" text-sm  w-fit text-gray-700 ">{item?.user}</span>
                   <span className=" rounded-md lg:p-2 lg:text-sm text-xs p-1 flex justify-center items-center text-gray-600  ">
                     {item?.post}
                   </span>
@@ -71,7 +71,7 @@ function AllComments() {
               </div>
             </div>
             {/* comment  text  */}
-            <span className="w-full text-justify flex items-center whitespace-pre-line lg:text-sm text-xs text-gray-main font-medium  leading-6 ">
+            <span className="w-full text-justify flex items-center whitespace-pre-line lg:text-sm text-xs text-gray-700 font-medium  leading-6 ">
               {item?.text}
             </span>
             {item?.answer && (
@@ -79,7 +79,7 @@ function AllComments() {
                 <div className="lg:w-[98%] w-full flex flex-col gap-y-3 items-center bg-gray-100 rounded-md   p-3">
                   <div className="flex lg:justify-start justify-between w-full items-center">
                     {' '}
-                    <span className=" w-full  text-gray-main lg:text-sm text-xs  font-semibold justify-start">
+                    <span className=" w-full  text-gray-500 lg:text-sm text-xs  font-semibold justify-start">
                       پاسخ{' '}
                     </span>
                   </div>

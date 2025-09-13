@@ -1,6 +1,6 @@
 import DataContext from 'comon/context/MainContext';
 import React, { useContext } from 'react';
-import logo from 'asset/Pictures/logo/aloneLogo.png';
+import logo from 'asset/Pictures/logo/logoalone.png';
 import failed from 'asset/Pictures/Images/failed.svg';
 import PrintMainButton from 'comon/Print/PrintMainButton';
 import DateFunctions from 'comon/DateFunction/DateFunctions';
@@ -59,7 +59,7 @@ function Status() {
                   backgroundImage:
                     'radial-gradient(100% 100% at 100% 0%, #EFFCFD 30%, rgba(255, 255, 255, 0) 100%)'
                 }}>
-                <img src={logo} />{' '}
+                <img src={logo} className="h-[50px]" />{' '}
                 <span className="w-full text-center text-gray-main font-semibold ">
                   {modal?.type == 'success' ? 'پرداخت با موفقیت انجام شد' : 'پرداخت ناموفق!'}
                 </span>

@@ -170,7 +170,7 @@ function Password({ step, setStep, nationalId, otp, captchaValue, captcha }) {
             </label>
             {step == 'password' && (
               <span
-                className="w-full flex justify-end   text-end  lg:text-sm text-xs text-[#C9B777] items-center  cursor-pointer "
+                className="w-full flex justify-end   text-end  lg:text-sm text-xs text-[#009085] items-center  cursor-pointer "
                 onClick={() => setStep('OtpPassword')}>
                 فراموشی رمز عبور{' '}
               </span>
@@ -311,7 +311,7 @@ function Password({ step, setStep, nationalId, otp, captchaValue, captcha }) {
             <button
               className={`w-[49%] lg:h-[50px] h-[43px] shadow-dropShadow2    text-center items-center flex justify-center font-medium text-sm rounded-large   text-white  ${
                 disable ? ' opacity-100' : ' opacity-50'
-              } ${isloading ? ' border border-[#C9B777] ' : 'bg-[#C9B777] '} `}
+              } ${isloading ? ' border border-[#009085] ' : 'bg-[#009085] '} `}
               disabled={!disable}
               type="submit">
               {isloading ? <BouncingDotsLoader /> : step == 'password' ? 'ورود ' : 'ثبت '}

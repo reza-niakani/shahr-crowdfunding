@@ -47,30 +47,28 @@ function PlanCardSlider({ plansStatus }) {
           {' '}
           <Swiper
             modules={[Navigation]}
-            spaceBetween={5}
-            slidesPerView={isMobile ? 1 : screenWidth < 1600 ? 2.5 : 3}
-            loop={false} // Enable infinite looping
+            spaceBetween={20}
+            slidesPerView={isMobile ? 1 : screenWidth < 1600 ? 2 : 3}
+            loop={false}
             navigation={{
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev'
             }}
+            centerInsufficientSlides={true} // 👈 Ensures centering when fewer slides
             pagination={{
               clickable: true,
               el: '.custom-pagination',
               bulletClass: 'custom-bullet',
               bulletActiveClass: 'custom-bullet-active'
             }}
-            className="mySwiper w-[80%] h-full justify-end flex items-center "
-            style={{ display: 'flex' }}>
+            className="mySwiper w-[80%] h-full flex justify-center items-center">
             {plans?.map((item, index) => (
               <SwiperSlide
                 key={index}
-                style={{ display: 'flex' }}
-                className="lg:w-[340px] w-[300px] flex justify-center h-auto items-center ">
-                {' '}
-                <PlanCard key={index} data={item} isSlider={true} />{' '}
+                className="lg:w-[340px] w-[300px] flex justify-center h-auto items-center">
+                <PlanCard key={index} data={item} isSlider={true} />
               </SwiperSlide>
-            ))}{' '}
+            ))}
           </Swiper>
           {/* Navigation Buttons and Pagination */}
           <div className=" flex items-center justify-center w-full lg:gap-x-5   ">

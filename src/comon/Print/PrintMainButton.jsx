@@ -14,7 +14,7 @@ function PrintMainButton({ documentTitle, pdf }) {
         documentTitle={documentTitle}
         trigger={() => {
           return (
-            <button className="w-[180px] lg:h-[48px] h-[40px]  bg-[#C9B777] text-white text-center flex justify-center rounded-md  items-center text-sm font-semibold  focus:outline-none focus:ring-0 focus:border-0 ">
+            <button className="w-[180px] lg:h-[48px] h-[40px]  bg-[#009085] text-white text-center flex justify-center rounded-md  items-center text-sm font-semibold  focus:outline-none focus:ring-0 focus:border-0 ">
               چاپ گواهی
             </button>
           );

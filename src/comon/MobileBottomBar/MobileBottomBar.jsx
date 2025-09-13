@@ -102,13 +102,13 @@ function MobileBottomBar() {
             {' '}
             <div
               className={`w-9 h-9  items-center flex justify-center ${
-                pathname?.includes(item.rout) ? ' rounded-full   bg-[#C9B777]   ' : '  '
+                pathname?.includes(item.rout) ? ' rounded-full   bg-[#009085]   ' : '  '
               }`}>
               <InlineSVG src={pathname?.includes(item.rout) ? item.activeIcon : item?.icon} />
             </div>
             <span
               className={`text-[10px] text-nowrap ${
-                pathname.includes(item?.key) ? 'text-[#C9B777]' : 'text-[#202020] '
+                pathname.includes(item?.key) ? 'text-[#009085]' : 'text-[#202020] '
               }`}>
               {item?.name}
             </span>

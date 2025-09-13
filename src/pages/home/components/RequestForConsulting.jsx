@@ -10,8 +10,8 @@ function RequestForConsulting() {
     <div className="lg:w-[70%] w-full h-[80%] flex lg:justify-start gap-y-5 justify-center  items-center">
       {/* form  */}
       <div className="lg:w-[28%] w-[90%] h-full flex flex-col lg:justify-center lg:gap-y-16 gap-y-4 justify-end  items-center">
-        <span className=" lg:text-[40px] text-2xl font-black lg:text-gray-main text-white  text-center whitespace-nowrap  ">
-          زاگرس،
+        <span className=" lg:text-[40px] text-2xl font-black text-gray-main  text-center whitespace-nowrap  ">
+          شهر،
           <br />
           {!isMobile && <br />} نماد سرمایه گذاری{' '}
         </span>

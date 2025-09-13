@@ -138,7 +138,7 @@ function EnteringMainCompo() {
               رفتن به سایت سجام
             </a>
             <button
-              className="rounded-large text-sm lg:h-[50px] h-[43px] text-[#C9B777] w-full   shadow-dropShadow2  "
+              className="rounded-large text-sm lg:h-[50px] h-[43px] text-[#009085] w-full   shadow-dropShadow2  "
               onClick={() => setStep('login')}>
               بازگشت
             </button>
@@ -149,7 +149,7 @@ function EnteringMainCompo() {
           <div className="w-full flex flex-col items-center   justify-between  h-full ">
             <Success text="ثبت نام شما با موفقیت انجام شد." />
             <button
-              className="rounded-large text-sm lg:h-[50px] h-[43px] text-[#C9B777] w-full   shadow-dropShadow2  "
+              className="rounded-large text-sm lg:h-[50px] h-[43px] text-[#009085] w-full   shadow-dropShadow2  "
               onClick={() => setStep('login')}>
               بازگشت
             </button>
@@ -206,10 +206,10 @@ function EnteringMainCompo() {
       <div className="w-full   flex lg:flex-row lg:min-h-[828px] flex-col lg:justify-center justify-start gap-3  items-center h-auto lg:py-0 py-5 ">
         {/* forms side  */}
         <div className="lg:w-[50%] w-[95%] h-full flex flex-col  justify-start items-center lg:gap-y-10  gap-y-3 ">
-          <div className="w-full flex justify-center items-center  lg:bg-white bg-gray-100 p-2 lg:h-[20%] rounded-large">
+          <div className="w-full flex justify-center items-center  lg:bg-white bg-gray-50 p-2 lg:h-[20%] rounded-large">
             <InlineSVG
               src={mainLogo}
-              className="lg:w-[270px] lg:h-[65px] w-[125px] h-[30px] cursor-pointer"
+              className="lg:w-[270px] lg:h-[165px] w-[125px] h-[100px] cursor-pointer"
               onClick={() => navigate('/')}
             />
           </div>
@@ -222,14 +222,14 @@ function EnteringMainCompo() {
                 <button
                   onClick={() => setStep('login')}
                   className={`w-[50%] lg:text-base text-sm  text-center items-start flex justify-center ${
-                    controlStep()?.key == 'login' ? 'text-[#C9B777]' : ' text-[#D9D9D9]'
+                    controlStep()?.key == 'login' ? 'text-[#009085]' : ' text-[#D9D9D9]'
                   } `}>
                   ورود
                 </button>
                 <button
                   onClick={() => setStep('register')}
                   className={`w-[50%] lg:text-base text-sm  text-center items-start flex justify-center ${
-                    controlStep()?.key == 'register' ? 'text-[#C9B777]' : ' text-[#D9D9D9]'
+                    controlStep()?.key == 'register' ? 'text-[#009085]' : ' text-[#D9D9D9]'
                   } `}>
                   ثبت‌نام
                 </button>
@@ -238,14 +238,14 @@ function EnteringMainCompo() {
                 <div
                   className={`w-[50%] text-center items-start flex justify-center ${
                     controlStep()?.key == 'login'
-                      ? 'border-[#C9B777] border-b-4 rounded-full '
+                      ? 'border-[#009085] border-b-4 rounded-full '
                       : ' text-[#D9D9D9]  border-b border-[#D9D9D9]'
                   } `}
                 />
                 <div
                   className={`w-[50%] text-center items-start flex justify-center ${
                     controlStep()?.key == 'register'
-                      ? 'border-[#C9B777] border-b-4 rounded-full '
+                      ? 'border-[#009085] border-b-4 rounded-full '
                       : ' text-[#D9D9D9]  border-b border-[#D9D9D9]'
                   } `}
                 />

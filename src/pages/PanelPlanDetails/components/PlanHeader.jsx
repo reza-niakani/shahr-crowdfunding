@@ -21,7 +21,7 @@ function PlanHeader({ data }) {
         </span>
         <div className="w-[95%]  flex lg:flex-row md:flex-row flex-col  flex-wrap text-sm  lg:items-center md:items-center items-start  text-gray-main justify-between gap-y-2">
           <span>مبلغ کل تامین مالی (ريال) :</span>
-          <span className="text-sm text-[#C9B777]">
+          <span className="text-sm text-[#009085]">
             {data?.goal && Number(data?.goal).toLocaleString()}
           </span>{' '}
         </div>
@@ -29,7 +29,7 @@ function PlanHeader({ data }) {
           {' '}
           <button
             onClick={() => setModal({ type: 'buyUnit', data: data })}
-            className="text-white text-center flex justify-center items-center h-[42px] rounded-md bg-[#C9B777] focus:outline-none focus:border-0 focus:ring-0 w-[150px]">
+            className="text-white text-center flex justify-center items-center h-[42px] rounded-md bg-[#009085] focus:outline-none focus:border-0 focus:ring-0 w-[150px]">
             سرمایه گذاری
           </button>
         </div>

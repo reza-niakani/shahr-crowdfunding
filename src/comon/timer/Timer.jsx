@@ -54,7 +54,7 @@ const CountdownTimer = ({ time, setTime }) => {
 
   return (
     <div className="flex items-center gap-x-1">
-      <span className="text-sm font-medium text-[#C9B777]">{formatTime(time)}</span>
+      <span className="text-sm font-medium text-[#009085]">{formatTime(time)}</span>
     </div>
   );
 };

@@ -40,7 +40,7 @@ function PanelPlanDetails() {
     <InnerPageStructure>
       <div className="lg:w-full w-full flex flex-col items-center justify-start gap-y-5 ">
         {/*  titile */}
-        <div className="lg:w-[90%] px-4 w-full flex lg:gap-x-3 justify-between items-center border border-[#E0E0E0] rounded-[20px] lg:h-[65px] h-[60px] bg-white text-base text-[#C9B777] ">
+        <div className="lg:w-[90%] px-4 w-full flex lg:gap-x-3 justify-between items-center border border-[#E0E0E0] rounded-[20px] lg:h-[65px] h-[60px] bg-white text-base text-[#009085] ">
           <div className="w-auto flex flex-nowrap items-center justify-start gap-x-3">
             {' '}
             <div

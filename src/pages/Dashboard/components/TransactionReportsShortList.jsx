@@ -47,7 +47,7 @@ function TransactionReportsShortList() {
         </div>
         <Link
           to="/financial_report"
-          className=" text-[#dfb355] lg:h-12 h-8 flex justify-center  items-center gap-x-2 bg-white rounded-large drop-shadow-md text-sm lg:font-bold font-semibold     px-3 ">
+          className=" text-accent-main lg:h-12 h-8 flex justify-center  items-center gap-x-2 bg-white rounded-large drop-shadow-md text-sm lg:font-bold font-semibold     px-3 ">
           همه تراکنش ها <InlineSVG src={arrowLeft} />
         </Link>
       </div>

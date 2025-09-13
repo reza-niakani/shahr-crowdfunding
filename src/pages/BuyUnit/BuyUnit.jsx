@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from 'asset/Pictures/Icons/buyUnit.svg';
+import logo from 'asset/Pictures/logo/logoalone.png';
 import close from 'asset/Pictures/Icons/closeCircle.svg';
 import InlineSVG from 'react-inlinesvg';
 import { useContext } from 'react';
@@ -13,14 +13,14 @@ import Receipt from './components/Receipt';
 
 function BuyUnit() {
   const { modal, setModal, role } = useContext(DataContext);
-  const [step, setStep] = useState('seccondRole');
+  const [step, setStep] = useState('firstRole');
   const [amount, setAmount] = useState(0);
   const [showName, setShowName] = useState(false);
 
   const HandleComponents = () => {
     switch (step) {
       case 'firstRole':
-        return <FirstRole setStep={setStep} />;
+        return <FirstRole setStep={setStep} data={modal?.data} file={modal?.file} />;
       case 'seccondRole':
         return <SeccondRole setStep={setStep} />;
       case 'setamount':
@@ -69,11 +69,11 @@ function BuyUnit() {
       className="w-full flex flex-col items-center justify-start rounded-large bg-white drop-shadow-lg h-auto min-h-[500px] py-8 gap-y-5 lg:max-w-[500px] "
       style={{
         backgroundImage:
-          'radial-gradient(100% 100% at 100% 0%, #fdf6ef 30%, rgba(255, 255, 255, 0) 100%)'
+          'radial-gradient(100% 100% at 100% 0%, #EFFCFD 30%, rgba(255, 255, 255, 0) 100%)'
       }}>
       {' '}
       <div className="w-[90%] flex justify-between items-center ">
-        <InlineSVG src={logo} />
+        <img src={logo} className="h-[50px]" />
         <InlineSVG src={close} className="cursor-pointer " onClick={() => setModal()} />
       </div>
       <div className="w-[90%] flex flex-col justify-start h-auto items-center ">

@@ -31,7 +31,7 @@ function Details({ mainData }) {
         `${numberToWords(mainData?.plandata?.installmentPeriod)}   ماه یکبار`
     },
     {
-      title: 'تضامین',
+      title: 'وضعیت ضمانت',
       data: mainData?.plandata?.warranty ? mainData?.plandata?.warranty : 'فاقد ضامن'
     },
     {

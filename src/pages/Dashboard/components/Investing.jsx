@@ -51,7 +51,7 @@ function Investing() {
         </div>
         <Link
           to="/investing"
-          className=" text-[#C9B777] lg:h-12 h-8  flex justify-center  items-center gap-x-2 bg-white rounded-large drop-shadow-md text-sm lg:font-bold font-semibold   px-3 ">
+          className=" text-[#009085] lg:h-12 h-8  flex justify-center  items-center gap-x-2 bg-white rounded-large drop-shadow-md text-sm lg:font-bold font-semibold   px-3 ">
           همه طرح ها <InlineSVG src={arrowLeft} />
         </Link>
       </div>
@@ -110,14 +110,14 @@ function Investing() {
               </div>
             </div>
           ) : (
-            <span className="w-[80%] text-center text-sm font-bold text-[#C9B777] bg-[#01B69B08]   border border-[#C9B777] rounded-large h-[42px]  flex items-center justify-center">
+            <span className="w-[80%] text-center text-sm font-bold text-[#009085] bg-[#01B69B08]   border border-[#009085] rounded-large h-[42px]  flex items-center justify-center">
               طرحی برای سرمایه گذاری یافت نشد!
             </span>
           )
         ) : plans?.length > 0 ? (
           plans?.map((plan, index) => <PlanCard key={index} data={plan} />)
         ) : (
-          <span className="w-[50%] text-center text-sm font-bold text-[#C9B777] bg-[#01B69B08]   border border-[#C9B777] rounded-large h-[42px]  flex items-center justify-center">
+          <span className="w-[50%] text-center text-sm font-bold text-[#009085] bg-[#01B69B08]   border border-[#009085] rounded-large h-[42px]  flex items-center justify-center">
             طرحی برای سرمایه گذاری یافت نشد!
           </span>
         )}

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import FixedGlobalyDetailsBlock from './components/FixedGlobalyDetailsBlock';
 import PlanRelatedDetails from './components/PlanRelatedDetails';
-import chevronLeftgreen from 'asset/Pictures/Icons/chevronLeftgold.svg';
+import chevronLeftgreen from 'asset/Pictures/Icons/chevronLeftgreen.svg';
 import InlineSVG from 'react-inlinesvg';
 import OtherPlansSlider from './components/OtherPlansSlider';
 import { formatIranianMobile, handleNumberInput } from 'comon/GlobalyTools/UseAbleFunctions';
@@ -91,9 +91,9 @@ function PlanDetail() {
       timeRange: 1
     })
       .then((res) => {
-        setResponse({ text: 'ثبت شد ', color: ' text-accent-600 ' });
+        setResponse({ text: 'ثبت شد ', color: ' text-accent-1000 ' });
       })
-      .catch(() => setResponse({ text: '   خطا ! ثبت ناموفق ', color: ' text-red-main' }))
+      .catch(() => setResponse({ text: '   خطا ! ثبت ناموفق ', color: ' text-red-600' }))
       .finally(() => {
         setIsloadingConsulting(false);
 
@@ -119,19 +119,19 @@ function PlanDetail() {
             <PlanRelatedDetails mainData={mainData} id={id} />
           </div>
           {/* other plans slider  */}
-          {/* <div className="lg:w-[80%] w-[95%] flex  flex-col  justify-start items-center lg:border-t border-gray-500 ">
+          {/* <div className="lg:w-[80%] w-[95%] flex  flex-col  justify-start items-center lg:border-t border-gray-100 ">
             <div className="w-full flex justify-between items-center ">
               <span className="lg:text-xl text-base font-black text-start">سایر طرح ها</span>
               <Link
                 to="/all_plans"
-                className="flex justify-end items-center lg:gap-x-2 lg:text-base text-xs font-black text-accent-600">
+                className="flex justify-end items-center lg:gap-x-2 lg:text-base text-xs font-black text-accent-1000">
                 مشاهده همه <InlineSVG src={chevronLeftgreen} />
               </Link>
             </div>
             <OtherPlansSlider />
           </div> */}
           {/* consulting request */}
-          <div className="lg:w-[70%] w-[95%] flex flex-col justify-start lg:gap-y-10 gap-y-7 items-center text-gray-main ">
+          <div className="lg:w-[70%] w-[95%] flex flex-col justify-start lg:gap-y-10 gap-y-7 items-center text-gray-700 ">
             <span className="lg:text-lg text-sm text-center w-full ">
               نیاز به راهنمایی بیشتر دارید؟
             </span>
@@ -149,7 +149,7 @@ function PlanDetail() {
                   onChange={(e) => setFullName(e.target.value)}
                   value={fullName}
                   placeholder="نام‌ونام‌خانوادگی"
-                  className="w-[95%] lg:w-[48%] flex justify-start  text-sm text-gray-main pr-4 text-start placeholder:text-gray-400 focus:outline-none focus:ring-0 border border-accent-600 rounded-large h-[42px] focus:border-accent-600"
+                  className="w-[95%] lg:w-[48%] flex justify-start  text-sm text-gray-700 pr-4 text-start placeholder:text-gray-400 focus:outline-none focus:ring-0 border border-accent-1000 rounded-large h-[42px] focus:border-accent-1000"
                 />
                 <input
                   type="text"
@@ -158,7 +158,7 @@ function PlanDetail() {
                   inputMode="numeric"
                   maxLength={11}
                   placeholder="شماره همراه  (** ** *** **۰۹)"
-                  className="w-[95%] lg:w-[48%] flex justify-start  text-sm text-gray-main pr-4 text-start placeholder:text-gray-400 focus:outline-none focus:ring-0 border border-accent-600 rounded-large h-[42px] focus:border-accent-600"
+                  className="w-[95%] lg:w-[48%] flex justify-start  text-sm text-gray-700 pr-4 text-start placeholder:text-gray-400 focus:outline-none focus:ring-0 border border-accent-1000 rounded-large h-[42px] focus:border-accent-1000"
                 />
               </div>
               {/* <div className="lg:w-auto w-[90%] justify-between items-center gap-x-5 flex">
@@ -171,7 +171,7 @@ function PlanDetail() {
                     checked={borseCode}
                     type="checkbox"
                     onClick={() => setBorseCode(!borseCode)}
-                    className={`focus:outline-none focus:ring-0 text-accent-600 lg:rounded-lg rounded-md lg:w-6 w-4 lg:h-6 h-4 border border-gray-main
+                    className={`focus:outline-none focus:ring-0 text-accent-1000 lg:rounded-lg rounded-md lg:w-6 w-4 lg:h-6 h-4 border border-gray-700
                     `}
                   />
                 </div>
@@ -183,7 +183,7 @@ function PlanDetail() {
                     checked={!borseCode}
                     type="checkbox"
                     onClick={() => setBorseCode(!borseCode)}
-                    className={`focus:outline-none focus:ring-0 text-accent-600 lg:rounded-lg rounded-md lg:w-6 w-4 lg:h-6 h-4 border border-gray-main
+                    className={`focus:outline-none focus:ring-0 text-accent-1000 lg:rounded-lg rounded-md lg:w-6 w-4 lg:h-6 h-4 border border-gray-700
                     `}
                   />
                 </div>
@@ -199,7 +199,7 @@ function PlanDetail() {
                 <button
                   type="submit"
                   disabled={!phoneNumber && !fullName}
-                  className={`w-[95%] lg:w-[15%] h-[42px] bg-accent-600 rounded-md focus:outline-none focus:border-0 focus:ring-0 flex justify-center items-center text-sm font-medium text-white  ${
+                  className={`w-[95%] lg:w-[15%] h-[42px] bg-accent-1000 rounded-md focus:outline-none focus:border-0 focus:ring-0 flex justify-center items-center text-sm font-medium text-white  ${
                     !phoneNumber && 'opacity-60'
                   }`}>
                   ثبت اطلاعات

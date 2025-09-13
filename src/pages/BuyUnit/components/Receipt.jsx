@@ -17,6 +17,7 @@ function Receipt({ setStep, data, amount, showName, setModal }) {
   }, [data?.id]);
 
   const navigate = useNavigate();
+
   const disable = receiptData && filePath;
 
   const ReceiptPreview = async () =>
@@ -72,14 +73,14 @@ function Receipt({ setStep, data, amount, showName, setModal }) {
       console.log('error', error);
       setError({
         status: false,
-        text: error.response.data?.title || 'خطا! لطفا زمانی دیگر تلاش کنید '
+        text: error?.response.data?.title || 'خطا! لطفا زمانی دیگر تلاش کنید '
       });
     } finally {
       setIsloading(false);
       setTimeout(() => {
         setModal();
-        setError();
         navigate('/financial_report');
+        setError();
       }, 3000);
     }
   };
@@ -129,7 +130,9 @@ function Receipt({ setStep, data, amount, showName, setModal }) {
 
       {error ? (
         <span
-          className={`  w-full text-center py-5 text-sm ${error?.status ? ' text-red-main ' : ' text-green-800 '} `}>
+          className={`  w-full text-center py-5 text-sm ${
+            error?.status ? ' text-green-1000 ' : ' text-red-600 '
+          } `}>
           {error?.text}
         </span>
       ) : (
@@ -138,14 +141,14 @@ function Receipt({ setStep, data, amount, showName, setModal }) {
           <button
             onClick={CreateInvestorOrder}
             disabled={!disable}
-            className={`w-[115px] lg:h-[48px] h-[38px] ${!isloading && 'bg-[#C9B777]'} ${
+            className={`w-[115px] lg:h-[48px] h-[38px] ${!isloading && 'bg-accent-1000'} ${
               !disable && ' opacity-60'
             } text-white text-sm font-medium rounded-md text-center flex justify-center items-center focus:outline-none focus:ring-0 focus:border-none`}>
             {isloading ? <BouncingDotsLoader /> : 'ثبت'}
           </button>
           <button
             onClick={() => setStep('paymethod')}
-            className={`w-[115px] lg:h-[48px] h-[38px] text-[#C9B777]  border border-[#C9B777] text-sm font-medium rounded-md text-center flex justify-center items-center focus:outline-none focus:ring-0 `}>
+            className={`w-[115px] lg:h-[48px] h-[38px] text-accent-1000  border border-accent-1000 text-sm font-medium rounded-md text-center flex justify-center items-center focus:outline-none focus:ring-0 `}>
             بازگشت{' '}
           </button>
         </div>

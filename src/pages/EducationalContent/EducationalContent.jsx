@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Thingknow from 'asset/Pictures/Images/Thingknow.png';
 import Keyword from 'asset/Pictures/Images/Keyword.png';
@@ -12,7 +13,7 @@ function EducationalContent() {
   const EducationalContentEnum = [
     {
       id: 1,
-      title: 'دانستنی ها در زاگرس کراد',
+      title: 'دانستنی ها در شهرکراد',
       pic: Thingknow
     },
     {
@@ -50,7 +51,7 @@ function EducationalContent() {
             </span>
           </div>
           <div className="w-[95%] max-w-[1440px] flex flex-wrap lg:flex-row flex-col items-center lg:justify-start justify-center gap-5">
-            {EducationalContentEnum.map((item) => (
+            {/* {EducationalContentEnum.map((item) => (
               <div
                 onClick={() => navigate(`/educational_content/${item.id}`)}
                 key={item.id}
@@ -60,7 +61,7 @@ function EducationalContent() {
                   {item.title}
                 </span>
               </div>
-            ))}
+            ))} */}
           </div>
         </>
       )}

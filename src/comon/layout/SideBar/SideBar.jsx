@@ -142,7 +142,7 @@ function SideBar() {
           className={`w-full flex justify-start gap-x-4 pr-5 cursor-pointer text-sm font-bold border items-center  rounded-lg h-[42px] ${
             !pathname.includes(item.rout)
               ? ' border-[#E0E0E0] text-gray-main  '
-              : ' border-[#C9B777] text-[#C9B777]  drop-shadow-lg  bg-[#fbf9f3]'
+              : ' border-[#009085] text-[#009085]  drop-shadow-lg  bg-[#fbf9f3]'
           }`}>
           <InlineSVG src={pathname.includes(item.rout) ? item.activeIcon : item.icon} />
           <span>{item.name}</span>

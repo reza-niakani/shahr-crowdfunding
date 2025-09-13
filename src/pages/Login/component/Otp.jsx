@@ -79,7 +79,7 @@ function Otp({ step, setStep, otp, setOtp, nationalId, error }) {
                     {...props}
                     className={`focus:outline-none focus:none focus:border-none focus:ring-green-700  ${
                       !error
-                        ? 'border-[#C9B777] text-[#C9B777] '
+                        ? 'border-[#009085] text-[#009085] '
                         : ' border border-red-500  focus:border-red-500 text-red-500 '
                     }`}
                   />
@@ -93,7 +93,7 @@ function Otp({ step, setStep, otp, setOtp, nationalId, error }) {
               className={`w-[90%] flex items-center  gap-x-5  lg:text-sm text-xs font-medium text-gray-main justify-between py-2 `}
               style={{ direction: 'rtl' }}>
               {timer == 0 && (
-                <span className=" cursor-pointer w-[30%] text-[#C9B777]  " onClick={SendOtpCode}>
+                <span className=" cursor-pointer w-[30%] text-[#009085]  " onClick={SendOtpCode}>
                   {' '}
                   ارسال مجدد
                 </span>
@@ -113,7 +113,7 @@ function Otp({ step, setStep, otp, setOtp, nationalId, error }) {
           <button
             className={`w-[49%] lg:h-[50px] h-[43px] shadow-dropShadow2    text-center items-center flex justify-center font-medium text-sm rounded-large   text-white  ${
               otp ? ' opacity-100' : ' opacity-50'
-            } ${isloading ? ' border border-[#C9B777] ' : 'bg-[#C9B777]'} `}
+            } ${isloading ? ' border border-[#009085] ' : 'bg-[#009085]'} `}
             disabled={!otp}
             onClick={() =>
               step == 'OtpRegister' ? setStep('registerPassword') : setStep('newPassword')

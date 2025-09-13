@@ -15,7 +15,7 @@ function FirstStep({ details, setDetails, goal, setGoal, setStep }) {
         </label>
         <textarea
           name="planTitle"
-          placeholder="به طور مثال طرح سبد گردان در گردش بخش توسعه و تکنولوژی سبدگردانی زاگرس"
+          placeholder="عنوان طرح"
           className=" focus:border-[#E0E0E0] focus:ring-0 focus:outline-none   placeholder:text-[#CCCCCC] placeholder:text-xs placeholder:p-3 w-full h-[90px] rounded-lg  border text-sm text-gray-main  border-[#E0E0E0] resize-none"
           value={details?.title}
           onChange={(e) => setDetails((prev) => ({ ...prev, title: e.target.value }))}

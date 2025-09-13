@@ -6,7 +6,7 @@ import mail from 'asset/Pictures/Icons/mail.svg';
 import socialMedia from 'asset/Pictures/Icons/socialMedia.svg';
 import InlineSVG from 'react-inlinesvg';
 import linkedIn from 'asset/Pictures/Icons/linkdin.svg';
-import insta from 'asset/Pictures/Icons/Instagram.svg';
+import insta from 'asset/Pictures/Icons/instagram.svg';
 import telegram from 'asset/Pictures/Icons/telegram.svg';
 import BouncingDotsLoader from 'comon/Loading/BouncingDotsLoader';
 import { formatIranianMobile, handleNumberInput } from 'comon/GlobalyTools/UseAbleFunctions';
@@ -50,11 +50,7 @@ function ContactUs() {
     {
       icon: location,
       title: 'آدرس دفتر مرکزی',
-      data: (
-        <p className="w-full text-justify text-sm text-gray-600  ">
-          میدان آرژانتین خیابان بیهقی خیابان چهاردهم شرقی پلاک ۲۱
-        </p>
-      )
+      data: <p className="w-full text-justify text-sm text-gray-600  ">---------------------- </p>
     },
     {
       icon: callus,
@@ -64,7 +60,7 @@ function ContactUs() {
           <a
             href="tel:021-52724"
             className="hover:text-accent-1100  w-[95%] text-start hover:underline underline-offset-4 hover:font-medium pt-1">
-            021-52724 (221 داخلی)
+            021---- (--- داخلی)
           </a>
           <ul className="w-[90%]  list-disc flex flex-col  items-start justify-start  text-sm  ">
             <li>شنبه تا چهارشنبه: 8 صبح تا 16</li>
@@ -80,7 +76,7 @@ function ContactUs() {
         <a
           href="mailto:info@zagrosam.com"
           className="hover:text-accent-1100  w-[90%] text-start  text-gray-600 hover:underline underline-offset-4 hover:font-medium">
-          info@zagrosam.com{' '}
+          -------------
         </a>
       )
     },
@@ -130,7 +126,7 @@ function ContactUs() {
           <p
             style={{ lineHeight: '35px' }}
             className="lg:w-[70%] w-[90%] text-center  lg:text-xl font-medium text-base  text-dark-700 lg:p-2">
-            ما در زاگرس کراد مشتاق شنیدن نظرات، سوالات و پیشنهادات شما هستیم. برای ارتباط با ما
+            ما در شهرکراد مشتاق شنیدن نظرات، سوالات و پیشنهادات شما هستیم. برای ارتباط با ما
             می‌توانید از یکی از روش‌های زیر استفاده کنید:
           </p>
         </div>
@@ -156,7 +152,7 @@ function ContactUs() {
             فرم تماس
           </span>
           <p className="lg:w-[85%] w-[95%] text-justify lg:text-base text-sm  ">
-            در صورتی که مایل به دریافت اطلاعات بیشتر یا ارسال پیام به تیم زاگرس هستید، می‌توانید فرم
+            در صورتی که مایل به دریافت اطلاعات بیشتر یا ارسال پیام به تیم شهر هستید، می‌توانید فرم
             زیر را تکمیل کنید. کارشناسان ما در کوتاه‌ترین زمان ممکن پاسخگوی شما خواهند بود.
           </p>
           <span className="lg:w-[90%] w-full text-start   lg:text-base text-sm font-bold ">

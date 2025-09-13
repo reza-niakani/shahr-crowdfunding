@@ -82,7 +82,7 @@ function OtherPlansSlider() {
           </div>
         </div>
       ) : (
-        <span className="w-full h-full flex justify-center items-start text-center  text-gray-main font-semibold  ">
+        <span className="w-full h-full flex justify-center items-start text-center  text-gray-700 font-semibold  ">
           طرحی برای سرمایه گذاری یافت نشد
         </span>
       )}

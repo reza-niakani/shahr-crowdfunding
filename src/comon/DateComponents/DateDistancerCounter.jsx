@@ -48,7 +48,7 @@ function DateDistancerCounter({ date }) {
           className={`w-[40px] h-[50px] text-xs font-bold rounded-lg ${
             item?.date > 0 ? 'flex flex-col ' : 'hidden'
           } items-center justify-center gap-y-1 ${
-            item?.today ? 'bg-[#C9B777] text-white' : ' bg-transparent text-gray-main '
+            item?.today ? 'bg-[#009085] text-white' : ' bg-transparent text-gray-main '
           } `}>
           {item.date}
           <span>روز</span>

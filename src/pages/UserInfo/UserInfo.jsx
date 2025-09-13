@@ -84,11 +84,11 @@ function UserInfo() {
         {/* <InlineSVG src={advertisment} /> */}
         <div
           style={{
-            background: 'radial-gradient(circle at center,  #C9B777 40%,  #C9B777 100%)'
+            background: 'radial-gradient(circle at center,  #009085 40%,  #009085 100%)'
           }}
           className="w-full min-h-[250px] h-auto rounded-lg drop-shadow-md    flex flex-col items-center justify-center gap-y-5  text-white  ">
           <span className="text-center lg:text-2xl text-xl font-extrabold  animate-bounce text-accent-1100 ">
-            زاگرس کراد
+            شهرکراد
           </span>{' '}
           <span className="text-center lg:text-lg text-base font-extrabold text-white">
             اعتبار پشت سر، فرصت پیش‌رو

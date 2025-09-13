@@ -160,7 +160,7 @@ function Register({
         <button
           className={`lg:w-[40%] w-full mt-8  h-10 text-center items-center rounded-large  flex justify-center font-medium text-sm  border-0 focus:outline-none focus:ring-0  text-white  ${
             disable ? ' opacity-100' : ' opacity-50'
-          } ${isloading ? ' border border-[#C9B777]  ' : 'bg-[#C9B777] '} `}
+          } ${isloading ? ' border border-[#009085]  ' : 'bg-[#009085] '} `}
           disabled={!disable}
           type="submit">
           {isloading ? <BouncingDotsLoader /> : 'ادامه'}

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import InnerPageStructure from 'comon/pageStructures/InnerPageStructure';
 import React from 'react';
 import AssetSideDetails from '../../comon/GlobalyComponnetsUsed/AssetSideDetails';
@@ -14,10 +15,10 @@ function Dashboard() {
     <InnerPageStructure>
       {/* main part  */}
       <div className="lg:w-full w-full flex flex-col items-center justify-start gap-y-5 ">
-        <InlineSVG
+        {/* <InlineSVG
           src={IsMobile ? bannerMobile : bannerDesktop}
           className="lg:w-[95%] lg:h-auto h-auto lg:object-contain object-cover"
-        />
+        /> */}
         {/*  investing status reports  */}
         <TransactionReportsShortList />
         {/* investing  */}

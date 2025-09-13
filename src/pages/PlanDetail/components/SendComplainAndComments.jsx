@@ -81,9 +81,9 @@ function SendComplainAndComments() {
         <div className="w-full h-auto flex flex-col items-center justify-start gap-y-5 ">
           <div className="w-[70%] flex justify-center gap-x-5  items-center p-3 bg-white drop-shadow-md rounded-md  ">
             <button
-              className={` w-[150px] h-[40px]  text-center flex justify-center items-start hover:drop-shadow-md hover:text-accent-600  font-bold text-sm hover:bg-gray-200  hover:rounded-lg p-3 ${
+              className={` w-[150px] h-[40px]  text-center flex justify-center items-start hover:drop-shadow-md hover:text-accent-1000  font-bold text-sm hover:bg-gray-50  hover:rounded-lg p-3 ${
                 requestType == 'comment'
-                  ? ' border-b border-accent-600 drop-shadow-md text-accent-600   '
+                  ? ' border-b border-accent-1000 drop-shadow-md text-accent-1000   '
                   : 'text-gray-600'
               } `}
               onClick={() => setRequestType('comment')}>
@@ -91,9 +91,9 @@ function SendComplainAndComments() {
               ثبت نظرات{' '}
             </button>
             <button
-              className={` w-[150px] h-[40px]  text-center flex justify-center items-start hover:drop-shadow-md hover:text-accent-600  font-bold  text-sm hover:bg-gray-300  hover:rounded-lg p-3  ${
+              className={` w-[150px] h-[40px]  text-center flex justify-center items-start hover:drop-shadow-md hover:text-accent-1000  font-bold  text-sm hover:bg-gray-50  hover:rounded-lg p-3  ${
                 requestType == 'complain'
-                  ? ' border-b border-accent-600 drop-shadow-md text-accent-600  '
+                  ? ' border-b border-accent-1000 drop-shadow-md text-accent-1000  '
                   : 'text-gray-600'
               } `}
               onClick={() => setRequestType('complain')}>
@@ -103,39 +103,39 @@ function SendComplainAndComments() {
           </div>
           {requestType == 'complain' && (
             <div className="w-[90%] flex flex-col items-center justify-start gap-y-1 ">
-              <label htmlFor="title" className="w-full text-start text-xs text-gray-main ">
+              <label htmlFor="title" className="w-full text-start text-xs text-gray-500 ">
                 موضوع شکایت{' '}
               </label>
               <input
                 placeholder="عنوان خود را بنویسید"
                 value={data?.title}
                 onChange={(e) => setData((prev) => ({ ...prev, title: e.target.value }))}
-                className="w-full  text-start pr-3 bg-gray-200 shadow-inner  text-sm text-gray-main h-[42px] rounded-lg  placeholder:text-gray-800  placeholder:text-xs   border-none focus:outline-none focus:ring-0 "
+                className="w-full  text-start pr-3  text-sm text-gray-700 h-[42px] rounded-lg  placeholder:text-gray-400  placeholder:text-xs  bg-white border-none focus:outline-none focus:ring-0 "
               />
             </div>
           )}
           <div className="w-[90%] flex flex-col items-center justify-start gap-y-1 ">
-            <label htmlFor="title" className="w-full text-start text-xs text-gray-main ">
+            <label htmlFor="title" className="w-full text-start text-xs text-gray-500 ">
               {requestType == 'complain' ? 'متن شکایت ' : 'افزدون نظر'}{' '}
             </label>
             <textarea
               placeholder="متن خود را بنویسید"
               value={data?.text}
               onChange={(e) => setData((prev) => ({ ...prev, text: e.target.value }))}
-              className="w-full  resize-y h-[200px] text-start   text-sm text-gray-main bg-gray-200 shadow-inner   rounded-lg  placeholder:text-gray-400 p-4 placeholder:text-xs  border-none focus:outline-none focus:ring-0 "
+              className="w-full  resize-none h-[200px] text-start pr-3  text-sm text-gray-700  rounded-lg  placeholder:text-gray-400  placeholder:text-xs  bg-white border-none focus:outline-none focus:ring-0 "
             />
           </div>
           <div className="w-[90%] flex  lg:justify-between lg:flex-row flex-col items-end gap-y-3  justify-start h-auto  ">
             {/* capcha */}
             <div className="lg:w-[70%] w-[90%] flex justify-between items-end ">
               <div className="w-[48%]  flex flex-col gap-y-1 items-center">
-                <label htmlFor="captcha" className="text-xs  text-gray-main w-full text-start ">
+                <label htmlFor="captcha" className="text-xs  text-gray-500 w-full text-start ">
                   کد امنیتی
                 </label>
                 <input
                   name="captcha"
                   inputMode="numeric"
-                  className="w-full rounded-lg border-0 bg-gray-200 shadow-inner  h-[42px]  text-sm text-center focus:outline-none focus:border-none focus:ring-0"
+                  className="w-full rounded-lg border-0 h-[42px] bg-white text-sm text-center focus:outline-none focus:border-none focus:ring-0"
                   value={captchaValue}
                   onChange={(e) => handleNumberInput(e, setCaptchaValue)}
                 />
@@ -175,7 +175,7 @@ function SendComplainAndComments() {
           </div>
         </div>
       ) : (
-        <span className="w-full text-center  text-sm  text-gray-main ">
+        <span className="w-full text-center  text-sm  text-gray-500 ">
           {' '}
           برای ثبت نظرات و شکایات لطفا وارد شوید{' '}
         </span>
