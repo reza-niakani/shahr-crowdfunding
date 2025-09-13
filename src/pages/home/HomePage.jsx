@@ -72,7 +72,7 @@ function HomePage() {
             <div className="w-full lg:w-[90%] flex flex-col lg:text-3xl  text-lg font-black text-start  items-start  justify-start h-auto lg:gap-y-4 ">
               <span>تامین مالی جمعی </span>
               <span className=" lg:text-xl  text-base font-bold">
-                مقایسه آنلاین فرصت‌های سرمایه‌گذاری در سپهر کراد
+                مقایسه آنلاین فرصت‌های سرمایه‌گذاری در شهرکراد
               </span>
             </div>
             <p

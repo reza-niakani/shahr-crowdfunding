@@ -38,7 +38,7 @@ function Footer() {
     // { title: 'صندوق اندوخته پایدار سپهر', rout: 'https://apsepehr.ir/' },
     // { title: 'صندوق همیان سپهر', rout: 'https://www.hsfund.ir/' },
     // { title: 'صندوق ستاره سپهر', rout: 'https://setarefund.ir/' },
-    // { title: 'صندوق پارند پایدار سپهر ', rout: 'https://parandfund.ir/' }
+    // { title: 'صندوق پارند پایدار شهر', rout: 'https://parandfund.ir/' }
   ];
   const SepehrFinancialServices = [
     // { title: 'کارگزاری شهر', rout: 'https://sifund.ir/' },
@@ -262,7 +262,7 @@ function Footer() {
           </div>
         </div>
         <div className="w-full flex lg:justify-end justify-center  h-auto items-center ">
-          <a
+          {/* <a
             referrerpolicy="origin"
             target="_blank"
             href="https://trustseal.enamad.ir/?id=623298&Code=cIgA59zGrRD8AVlET4ZeBPvxNjeWwLd1">
@@ -273,7 +273,7 @@ function Footer() {
               style={{ cursor: 'pointer' }}
               code="cIgA59zGrRD8AVlET4ZeBPvxNjeWwLd1"
             />
-          </a>
+          </a> */}
           {/* <a target="_blank" href="https://www.ifb.ir/">
             {' '}
             <img src={farabors} />
