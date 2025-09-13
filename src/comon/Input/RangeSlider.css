@@ -1,0 +1,43 @@
+/* WebKit browsers (Chrome, Safari) */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none;
+  width: 24px; /* Outer circle size */
+  height: 24px; /* Outer circle size */
+  background: rgba(107, 114, 128, 1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffb700",endColorstr="#e3a70f",GradientType=1);
+  border-radius: 50%; /* Make it circular */
+  position: relative;
+  border: 6px solid rgba(75, 85, 99, 1);
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+/* Firefox */
+input[type='range']::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: rgba(196, 196, 8, 0.911);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffb700",endColorstr="#e3a70f",GradientType=1);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+/* Inner circle for Firefox */
+
+/* Internet Explorer and Edge */
+input[type='range']::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  background: rgb(255, 183, 0);
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffb700",endColorstr="#e3a70f",GradientType=1);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+/* Inner circle for Internet Explorer and Edge */

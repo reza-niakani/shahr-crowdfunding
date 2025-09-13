@@ -1,0 +1,26 @@
+#curve {
+  position: relative;
+  background: #f9fafb;
+  border-radius: 50%;
+}
+
+#curve::after,
+#curve::before {
+  content: '';
+  position: absolute;
+  width: 15px; /* Adjust for a smoother curve */
+  height: 15px;
+  background: white;
+  bottom: 19.8px; /* Positioning at the bottom */
+  z-index: -1;
+}
+
+#curve::before {
+  left: -4px;
+  border-top-right-radius: 100%;
+}
+
+#curve::after {
+  right: -4px;
+  border-top-left-radius: 100%;
+}

@@ -1,0 +1,201 @@
+/* Tailwind Base */
+@import 'tailwindcss/base';
+@import './asset/tailwind-config/css/base.css';
+
+/* Tailwind Components */
+@import 'tailwindcss/components';
+@import './asset/tailwind-config/css/components.css';
+
+/* Tailwind Utilities */
+@import 'tailwindcss/utilities';
+@import './asset/tailwind-config/css/utilities.css';
+
+@import url(./asset/font/IranSansX/Webfonts/fontiran.css);
+
+@layer base {
+  html {
+    font-family: IRANSansX, 'IRANSansX';
+    @apply bg-white;
+  }
+
+  .text-d1 {
+    @apply text-[1.793rem] lg:text-[2.566rem] leading-[180%];
+  }
+
+  .text-d2 {
+    @apply text-[1.68rem] lg:text-[2.281rem] leading-[180%];
+  }
+
+  .text-d3 {
+    @apply text-[1.575rem] lg:text-[2.07rem] leading-[180%];
+  }
+
+  .text-1 {
+    @apply text-[1.476rem] lg:text-[1.802rem] leading-[180%];
+  }
+
+  .text-2 {
+    @apply text-[1.383rem] lg:text-[1.602rem] leading-[180%];
+  }
+
+  .text-3 {
+    @apply text-[1.296rem] lg:text-[1.424rem] leading-[180%];
+  }
+
+  .text-4 {
+    @apply text-[1.215rem] lg:text-[1.266rem] leading-[180%];
+  }
+
+  .text-5 {
+    @apply text-[1.125rem] lg:text-[1.138rem] leading-[180%];
+  }
+
+  .text-6 {
+    @apply text-[1rem] lg:text-[1.067rem] leading-[180%];
+  }
+
+  .text-caption {
+    @apply text-[0.889rem] lg:text-[0.937rem] leading-[180%];
+  }
+
+  .text-footer {
+    @apply text-[0.790rem] lg:text-[0.878rem] leading-[180%];
+  }
+
+  .text-label {
+    @apply text-[0.702rem] lg:text-[0.823rem] leading-[180%];
+  }
+
+  .text-warning {
+    @apply text-[0.624rem] lg:text-[0.772rem] leading-[180%];
+  }
+
+  h1 {
+    @apply text-[1.476rem] lg:text-[1.802rem] leading-[180%];
+  }
+
+  h2 {
+    @apply text-[1.383rem] lg:text-[1.602rem] leading-[180%];
+  }
+
+  h3 {
+    @apply text-[1.296rem] lg:text-[1.424rem] leading-[180%];
+  }
+
+  h4 {
+    @apply text-[1.215rem] lg:text-[1.266rem] leading-[180%];
+  }
+
+  h5 {
+    @apply text-[1.138rem] lg:text-[1.125rem] leading-[180%];
+  }
+
+  h6 {
+    @apply text-[1.067rem] lg:text-[1rem] leading-[180%];
+  }
+}
+
+.tooltip {
+  @apply absolute bottom-full mb-2 w-max p-2 bg-gray-main text-white text-sm rounded shadow-lg;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: IRANSansX, 'IRANSansX';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+  width: 100%;
+  height: auto; /* Remove 100vh */
+  overflow-x: hidden;
+  overflow-y: scroll; /* Ensure vertical scrolling */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto; /* Enable scrolling for main content */
+}
+
+body {
+  margin: 0;
+  font-family: IRANSansX, 'IRANSansX';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+iframe#webpack-dev-server-client-overlay {
+  display: none !important;
+}
+
+.Toastify div {
+  font-family: IRANSansX, 'IRANSansX';
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.direction-ltr {
+  direction: ltr;
+}
+.direction-rtl {
+  direction: rtl;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+  z-index: -1;
+  height: 0px;
+  position: relative;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px #9c9c9c;
+  /* border-radius: 20px; */
+  position: relative;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9c9c9c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9c9c9c;
+}
+
+.max-h-96 {
+  max-height: 24rem; /* 96/4rem = 24rem */
+  overflow-y: auto;
+}
+
+/* thead th {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: inherit;
+} */
+
+/*  for slider to set range styling  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: transparent !important;
+  color: rgb(129, 123, 123) !important;
+  -webkit-text-fill-color: inherit !important;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
