@@ -35,7 +35,7 @@ function Gatway({ setStep, data, amount, showName }) {
 
   const CreatePayment = async (numberId) =>
     await Axios.post('/Payment/Create', {
-      gatewayId: 4,
+      gatewayId: 5,
       returnUrl: `http://shahrcrowd.ir${pathname}${search}`,
       amount: amount,
       walletFlowId: numberId
@@ -83,41 +83,69 @@ function Gatway({ setStep, data, amount, showName }) {
     }
   };
 
-  const handlePayment = () => {
-    // if (!accessToken || !selectedFund) return;
-    // console.log(' token', token, 'nationalCode', nationalCode);
+  // const handlePayment = () => {
+  //   // if (!accessToken || !selectedFund) return;
+  //   // console.log(' token', token, 'nationalCode', nationalCode);
 
+  //   // Create the form
+  //   const formElement = document.createElement('form');
+  //   formElement.setAttribute('method', 'post');
+  //   formElement.setAttribute('action', 'https://sepehr.shaparak.ir:8080/Pay');
+  //   // formElement.setAttribute('target', '_blank');
+
+  //   // TerminalID input
+  //   const terminalInput = document.createElement('input');
+  //   terminalInput.setAttribute('type', 'text');
+  //   terminalInput.setAttribute('name', 'TerminalID');
+  //   terminalInput.setAttribute('value', '99101358');
+
+  //   // token input
+  //   const tokenInput = document.createElement('input');
+  //   tokenInput.setAttribute('type', 'text');
+  //   tokenInput.setAttribute('name', 'token');
+  //   tokenInput.setAttribute('value', token);
+
+  //   // nationalCode input
+  //   const nationalCodeInput = document.createElement('input');
+  //   nationalCodeInput.setAttribute('type', 'text');
+  //   nationalCodeInput.setAttribute('name', 'nationalCode');
+  //   nationalCodeInput.setAttribute('value', nationalCode);
+
+  //   // Append inputs to form
+  //   formElement.appendChild(terminalInput);
+  //   formElement.appendChild(tokenInput);
+  //   formElement.appendChild(nationalCodeInput);
+  //   // formElement.appendChild(nationalCodeInput);
+
+  //   // Append form to body
+  //   document.body.appendChild(formElement);
+
+  //   // Submit the form
+  //   formElement.submit();
+  // };
+  const handlePayment = async () => {
+    const paymentUrl = paymentRes?.paymentUrl;
+    const token = paymentRes?.token;
     // Create the form
     const formElement = document.createElement('form');
     formElement.setAttribute('method', 'post');
-    formElement.setAttribute('action', 'https://sepehr.shaparak.ir:8080/Pay');
-    // formElement.setAttribute('target', '_blank');
+    formElement.setAttribute('action', paymentUrl);
 
-    // TerminalID input
-    const terminalInput = document.createElement('input');
-    terminalInput.setAttribute('type', 'text');
-    terminalInput.setAttribute('name', 'TerminalID');
-    terminalInput.setAttribute('value', '99101358');
+    // Create the first input field for RefId
+    const inputElement = document.createElement('input');
+    inputElement.setAttribute('type', 'text');
+    inputElement.setAttribute('name', 'RefId');
+    inputElement.setAttribute('value', token);
 
-    // token input
-    const tokenInput = document.createElement('input');
-    tokenInput.setAttribute('type', 'text');
-    tokenInput.setAttribute('name', 'token');
-    tokenInput.setAttribute('value', token);
-
-    // nationalCode input
-    const nationalCodeInput = document.createElement('input');
-    nationalCodeInput.setAttribute('type', 'text');
-    nationalCodeInput.setAttribute('name', 'nationalCode');
-    nationalCodeInput.setAttribute('value', nationalCode);
+    // Create the second input field for language
+    const inputElement2 = document.createElement('input');
+    inputElement2.setAttribute('type', 'text');
+    inputElement2.setAttribute('name', 'language');
+    inputElement2.setAttribute('value', 'fa');
 
     // Append inputs to form
-    formElement.appendChild(terminalInput);
-    formElement.appendChild(tokenInput);
-    formElement.appendChild(nationalCodeInput);
-    // formElement.appendChild(nationalCodeInput);
-
-    // Append form to body
+    formElement.appendChild(inputElement);
+    formElement.appendChild(inputElement2);
     document.body.appendChild(formElement);
 
     // Submit the form
