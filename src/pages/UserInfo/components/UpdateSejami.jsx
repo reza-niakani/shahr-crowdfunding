@@ -63,8 +63,7 @@ function UpdateSejami({ userInfo }) {
         setStatus({
           style: ' text-red-700 ',
           text:
-            res?.response?.data?.title ||
-            ' خطایی در انجام عملیات رخ داده لطفا زمان دیرگر تلاش کنید '
+            res?.response?.data?.title || ' خطایی در انجام عملیات رخ داده لطفا زمان دیگر تلاش کنید '
         });
       }
     } catch (er) {
@@ -72,7 +71,7 @@ function UpdateSejami({ userInfo }) {
       setStatus({
         style: ' text-red-700 ',
         text:
-          er?.response?.data?.title || ' خطایی در انجام عملیات رخ داده لطفا زمان دیرگر تلاش کنید '
+          er?.response?.data?.title || ' خطایی در انجام عملیات رخ داده لطفا زمان دیگر تلاش کنید '
       });
     } finally {
       setIsloading(false);

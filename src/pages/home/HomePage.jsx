@@ -155,14 +155,14 @@ function HomePage() {
             <span className="w-auto  lg:text-start text-center lg:text-2xl text-base  font-bold text-gray-600   ">
               محتوای آموزشی برای تصمیم‌گیری آگاهانه
             </span>
-            <Link
+            {/* <Link
               to="/educational_content"
               className=" w-auto flex flex-nowrap  gap-x-1 items-center text-sm font-medium hover:font-bold  text-accent-1000    ">
               مشاهده همه
               <InlineSVG src={chevron} />
-            </Link>
+            </Link> */}
           </div>
-          {/* <Articles /> */}
+          <Articles />
         </div>
         {/* frequently questions */}
         <div className="lg:w-[70%] w-[90%]  flex flex-col lg:gap-y-16 gap-y-8 justify-center items-center lg:pb-20 pb-10">

@@ -81,22 +81,22 @@ function TransactionReportsShortList() {
                   className={`  ${
                     index < transactions?.length - 1 && 'border-b'
                   } border-dashed border-[#E0E0E0]`}>
-                  <td className=" text-sm text-[#939393] w-auto text-wrap whitespace-pre-line text-start items-center font-medium p-4   ">
+                  <td className=" text-xs text-[#939393] w-auto text-wrap whitespace-pre-line text-start items-center font-medium p-2   ">
                     {item?.planTitle}
                   </td>
-                  <td className=" text-sm text-[#939393] text-wrap whitespace-pre-line text-start items-center font-medium p-4   ">
+                  <td className=" text-xs text-[#939393] text-wrap whitespace-pre-line text-start items-center font-medium p-2   ">
                     {item?.createDate &&
                       item?.createDate.split('T')?.[0] &&
                       DateFunctions.getDate(item?.createDate.split('T')[0])}
                   </td>
-                  <td className=" text-sm text-[#939393] text-wrap whitespace-pre-line text-start items-center font-medium p-4   ">
+                  <td className=" text-xs text-[#939393] text-wrap whitespace-pre-line text-start items-center font-medium p-2   ">
                     {item?.createDate && item?.createDate.split('T')[1]}
                   </td>
-                  <td className=" text-sm text-[#939393] text-wrap whitespace-pre-line text-start items-center font-medium p-4   ">
+                  <td className=" text-xs text-[#939393] text-wrap whitespace-pre-line text-start items-center font-medium p-2   ">
                     {item?.moneyAmount && Number(item?.moneyAmount).toLocaleString()}
                   </td>
                   <td
-                    className={` text-sm text-[#939393] w-auto text-wrap whitespace-pre-line text-start justify-start items-center p-4 `}>
+                    className={` text-xs text-[#939393] w-auto text-wrap whitespace-pre-line text-start justify-start items-center p-2 `}>
                     {FindById(FinancialStatusEnum, item?.status) ? (
                       <span
                         className={`w-auto border  text-nowrap max-w-[200px]  text-center  p-1 rounded-lg justify-center sitems-center lg:text-xs text-[8px]  `}

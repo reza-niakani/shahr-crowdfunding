@@ -17,25 +17,50 @@ export const BoardMember = [
 ];
 
 export const executeMemebers = [
-  // {
-  //   name: 'حسن طاعتی کاشانی',
-  //   posotion: 'متخصص حوزه کسب و کار',
-  //   WorkHistory: [
-  //     'مدیر خدمات مالی شرکت تامین سرمایه امید',
-  //     'رئیس اداره تامین مالی بدهی شرکت تامین سرمایه امید',
-  //     'عضو هیأت‌مدیره شرکت کارگزاری تدبیرگران فردا',
-  //     'نایب رئیس هیأت‌مدیره شرکت رهپویان  پردازش گستر (OMS بازار سرمایه) '
-  //   ]
-  // }
+  {
+    name: 'حامد حاتمی',
+    posotion: 'مدیر اجرایی',
+    WorkHistory: []
+  },
+  {
+    name: 'سارا منیعی',
+    posotion: 'مسئول مالی',
+    WorkHistory: []
+  },
+  {
+    name: 'آراس صابر',
+    posotion: 'مسئول فنی',
+    WorkHistory: []
+  },
+  {
+    name: 'فاطمه ایمانی ',
+    posotion: 'کارشناس تحلیل و سرمایه‌گذاری',
+    WorkHistory: []
+  },
+  {
+    name: 'زهرا امیری داویجانی',
+    posotion: 'کارشناس ریسک',
+    WorkHistory: []
+  },
+  {
+    name: 'بهروز اردوبادی',
+    posotion: 'کارشناس بازاریابی',
+    WorkHistory: []
+  },
+  {
+    name: 'محمد جواد اسدی',
+    posotion: 'مشاور حقوقی',
+    WorkHistory: []
+  }
 ];
 
 export const registrationInfo = [
   { title: 'نام شرکت', data: 'کارگزاری شهر' },
   { title: 'نوع شحصیت حقوقی', data: ' سهامی خاص' },
-  { title: 'شماره ثبت', data: '0000000' },
-  { title: 'شناسه ملی', data: '000000' },
+  { title: 'شماره اقتصادی', data: '411356349859' },
+  { title: 'شناسه ملی', data: '10104008822' },
   { title: 'شماره ثبت نزد سازمان به عنوان نهاد مالی', data: '353410' },
-  { title: 'تاریخ تاسیس شرکت ', data: '1388/01/01' }
+  { title: 'تاریخ تاسیس شرکت ', data: '1388/03/31' }
 ];
 
 export const advertismentData = [
@@ -46,3 +71,10 @@ export const advertismentData = [
   { text: 'پالایش دقیق طرح‌ها از نظر اقتصادی، حقوقی و اجرایی؛', icon: docSearch },
   { text: 'حمایت همه‌جانبه از کارآفرینان در مسیر رشد کسب‌وکار.', icon: chart }
 ];
+
+export const BankAccountInfos = {
+  bankName: 'بانک شهر',
+  accountNumber: '4001005705557',
+  branchName: 'آرژانتین الوند',
+  iban: ' IR960610000004001005705557'
+};

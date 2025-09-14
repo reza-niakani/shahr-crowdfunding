@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Article1 from './components/Article1';
 import Article2 from './components/Article2';
 import Article3 from './components/Article3';
 import Article4 from './components/Article4';
+import Article5 from './components/Article5';
 
 function Articles() {
   const { name } = useParams();
@@ -13,13 +15,13 @@ function Articles() {
   const handelArticles = () => {
     switch (name) {
       case 'article1':
-        return <Article1 />;
-      case 'article2':
-        return <Article2 />;
-      case 'article3':
-        return <Article3 />;
-      case 'article4':
-        return <Article4 />;
+        return <Article5 />;
+      // case 'article2':
+      //   return <Article2 />;
+      // case 'article3':
+      //   return <Article3 />;
+      // case 'article4':
+      //   return <Article4 />;
       default:
         return false;
     }

@@ -50,19 +50,26 @@ function ContactUs() {
     {
       icon: location,
       title: 'آدرس دفتر مرکزی',
-      data: <p className="w-full text-justify text-sm text-gray-600  ">---------------------- </p>
+      data: (
+        <p className="w-full text-justify text-sm text-gray-600  ">
+          خیابان سید حسن نصرالله (خالد اسلامبولی) کوچه ۱۸ پلاک ۲
+        </p>
+      )
     },
     {
       icon: callus,
       title: 'شماره تماس',
       data: (
         <div className="w-[90%] flex flex-col   justify-start gap-y-1 items-center  text-gray-600  text-sm    ">
-          <a
-            href="tel:021-52724"
-            className="hover:text-accent-1100  w-[95%] text-start hover:underline underline-offset-4 hover:font-medium pt-1">
-            021---- (--- داخلی)
-          </a>
-          <ul className="w-[90%]  list-disc flex flex-col  items-start justify-start  text-sm  ">
+          <ul className="w-[90%]  list-disc flex flex-col  items-start justify-start  text-sm gap-y-1  ">
+            <li>
+              {' '}
+              <a
+                href="tel:021۵۸۱۳۷۳۰۲ "
+                className="hover:text-accent-1000  w-[95%] text-start  hover:underline underline-offset-4 hover:font-medium pt-1">
+                021-۵۸۱۳۷۳۰۲
+              </a>
+            </li>
             <li>شنبه تا چهارشنبه: 8 صبح تا 16</li>
             <li>پنجشنبه‌ها: 8 صبح تا 15</li>
           </ul>{' '}
@@ -74,9 +81,9 @@ function ContactUs() {
       title: 'ایمیل',
       data: (
         <a
-          href="mailto:info@zagrosam.com"
+          href="mailto:info@shahrb-co.ir"
           className="hover:text-accent-1100  w-[90%] text-start  text-gray-600 hover:underline underline-offset-4 hover:font-medium">
-          -------------
+          info@shahrb-co.ir
         </a>
       )
     },

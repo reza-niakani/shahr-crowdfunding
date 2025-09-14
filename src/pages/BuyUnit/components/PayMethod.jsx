@@ -1,3 +1,4 @@
+import { BankAccountInfos } from 'pages/AboutUs/component/Enum';
 import React, { useState } from 'react';
 
 function PayMethod({ setStep }) {
@@ -19,7 +20,7 @@ function PayMethod({ setStep }) {
   ];
 
   return (
-    <div className="lg:w-[90%] w-full flex flex-col items-center justify-start h-[400px] pt-8 gap-y-6">
+    <div className="lg:w-[90%] w-full flex flex-col items-center justify-start min-h-[400px] pt-8 gap-y-6">
       {methods.map((item, index) => (
         <div
           onClick={() => setSelectedMethod(item.key)}
@@ -46,11 +47,14 @@ function PayMethod({ setStep }) {
       <div className="w-full flex flex-col items-center justify-start gap-y-2 border border-gray-200  shadow-lg p-2 rounded-lg  ">
         <span> اطلاعات حساب شهرکراد </span>
         <span dir="rtl" className="w-[90%] text-start  text-sm font-Yekan ">
-          شبا: IR--------------------
+          بانک: {BankAccountInfos?.bankName}
+        </span>
+        <span dir="rtl" className="w-[90%] text-start  text-sm font-Yekan ">
+          شبا: {BankAccountInfos?.iban}
         </span>
         <span className="w-[90%] text-start  text-sm " dir="rtl">
           {' '}
-          شماره حساب : ----------------
+          شماره حساب : {BankAccountInfos?.accountNumber}
         </span>
       </div>
       <div className="w-full flex justify-between items-center   mt-2        ">

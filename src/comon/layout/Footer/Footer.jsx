@@ -35,17 +35,17 @@ function Footer() {
   };
 
   const InvestingFundsLinks = [
-    // { title: 'صندوق اندوخته پایدار سپهر', rout: 'https://apsepehr.ir/' },
-    // { title: 'صندوق همیان سپهر', rout: 'https://www.hsfund.ir/' },
-    // { title: 'صندوق ستاره سپهر', rout: 'https://setarefund.ir/' },
-    // { title: 'صندوق پارند پایدار شهر', rout: 'https://parandfund.ir/' }
+    { title: 'صندوق اختصاصی بازارگردانی شهر', rout: 'https://shahrbfund.ir/' },
+    {
+      title: 'صندوق سرمایه‌گذاری گنجینه زرین شهر',
+      rout: 'https://ibshop.ir/funds/fixed-income/details/10919'
+    },
+    { title: 'صندوق سرمایه‌گذاری املاک و مستغلات امین شهر یکم', rout: 'https://reitshahr.ir/' }
   ];
-  const SepehrFinancialServices = [
-    // { title: 'کارگزاری شهر', rout: 'https://sifund.ir/' },
-    // { title: 'بانک صادرات ایران ', rout: 'https://www.bsi.ir/Pages/Home.aspx' },
-    // { title: 'فرابورس ایران ', rout: 'https://www.ifb.ir/' },
-    // { title: 'کارگزاری بانک صادرات ایران', rout: 'https://saderatbourse.ir/' },
-    // { title: 'بیمه سرمد ', rout: 'https://sarmadins.ir/' }
+  const ShahrFinancialServices = [
+    { title: 'خدمات معاملات آنلاین بورس اوراق بهادار و فرابورس', rout: 'https://shahrb.ir/' },
+    { title: 'خدمات معاملات بورس کالا و بازار فیزیکی کالا', rout: 'https://shahrb.ir/' },
+    { title: 'ورود و ثبت‌نام غیرحضوری کارگزاری شهر', rout: 'https://shahrb.ir/' }
   ];
 
   const QuickAccess = [
@@ -73,35 +73,35 @@ function Footer() {
         {/* line 2 */}
         <div className="w-full lg:justify-between justify-start lg:items-start items-center flex lg:flex-row flex-col flex-nowrap gap-y-3 lg:gap-x-16   h-auto lg:pb-12">
           {/* info */}
-          <div className="lg:w-auto lg:max-w-[330px] w-full flex flex-col justify-start items-center  lg:gap-y-3 gap-y-2">
+          <div className="lg:w-auto lg:max-w-[400px] w-full flex flex-col justify-start items-center  lg:gap-y-3 gap-y-2">
             <div className="w-full flex justify-start items-start gap-x-2 ">
-              <span className=" lg:text-base text-sm font-bold text-gray-700 ">آدرس:</span>
-              <span className=" text-gray-500 text-sm  font-bold  ">
-                -----------------------------------{' '}
+              <span className="  text-sm font-bold text-gray-700 ">آدرس:</span>
+              <span className=" text-gray-500 text-sm  font-medium  ">
+                خیابان سید حسن نصرالله (خالد اسلامبولی) کوچه ۱۸ پلاک ۲{' '}
               </span>
             </div>
             <div className="w-full flex justify-start items-center gap-x-2 ">
-              <span className=" lg:text-base text-sm font-bold text-gray-700  ">کد پستی:</span>
-              <span className=" text-gray-500 text-base font-Yekan text-end  font-bold ">
-                1111111111
+              <span className="  text-sm font-bold text-gray-700  ">کد پستی:</span>
+              <span className=" text-gray-500 text-sm font-Yekan text-end  font-medium ">
+                1511736863
               </span>
             </div>
             <div className="w-full flex justify-start items-center gap-x-2 ">
-              <span className=" lg:text-base text-sm font-bold text-gray-700 whitespace-nowrap">
+              <span className="  text-sm font-bold text-gray-700 whitespace-nowrap">
                 شماره تماس:
               </span>
               <a
-                href="tel:021------"
+                href="tel:021۵۸۱۳۷۳۰۲"
                 className=" text-gray-500 text-xs  font-bold hover:text-accent-600  ">
-                (- داخلی) 021------{' '}
+                021-۵۸۱۳۷۳۰۲{' '}
               </a>
             </div>
             <div className="w-full flex justify-start items-center gap-x-2 ">
-              <span className=" lg:text-base text-sm font-bold whitespace-nowrap"> ایمیل :</span>
+              <span className="  text-sm font-bold whitespace-nowrap"> ایمیل :</span>
               <a
-                href="mailto:info@sepehrib.com"
-                className=" text-gray-500 text-base  font-bold hover:text-accent-600  ">
-                ------{' '}
+                href="mailto:info@shahrb-co.ir"
+                className=" text-gray-500 text-sm  font-medium hover:text-accent-600  ">
+                info@shahrb-co.ir
               </a>
             </div>
           </div>
@@ -134,7 +134,7 @@ function Footer() {
               ) : (
                 <>
                   {' '}
-                  <span className=" text-base font-bold text-start text-gray-700">
+                  <span className=" text-base w-full font-bold text-start text-gray-700">
                     صندوق‌های سرمایه‌گذاری
                   </span>
                   <div className="w-full flex flex-col items-start justify-start gap-y-2 text-gray-500 text-sm  font-bold">
@@ -163,7 +163,7 @@ function Footer() {
                   answer={
                     <div className="w-full flex flex-col items-start gap-y-2 text-gray-500 text-sm font-bold">
                       {' '}
-                      {SepehrFinancialServices?.map((item, index) => (
+                      {ShahrFinancialServices?.map((item, index) => (
                         <a
                           target="_blank"
                           rel="noreferrer"
@@ -180,12 +180,12 @@ function Footer() {
               ) : (
                 <>
                   {' '}
-                  <span className=" text-base font-bold text-start text-gray-700">
+                  <span className=" text-base font-bold w-full text-start text-gray-700">
                     خدمات مالی کارگزاری شهر{' '}
                   </span>
                   <div className="w-full flex flex-col items-start justify-start gap-y-2 text-gray-500 text-sm  font-bold">
                     {' '}
-                    {SepehrFinancialServices?.map((item, index) => (
+                    {ShahrFinancialServices?.map((item, index) => (
                       <a
                         target="_blank"
                         rel="noreferrer"

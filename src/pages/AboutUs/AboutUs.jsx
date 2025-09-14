@@ -1,7 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import document from 'asset/Pictures/Icons/documentcertificate.png';
 import useDeviceDetection from 'comon/DeviceDetector/useDeviceDetection';
-import { advertismentData, BoardMember, executeMemebers, registrationInfo } from './component/Enum';
+import {
+  advertismentData,
+  BankAccountInfos,
+  BoardMember,
+  executeMemebers,
+  registrationInfo
+} from './component/Enum';
 import person from 'asset/Pictures/Icons/personIcon.png';
 import DataContext from 'comon/context/MainContext';
 import card from 'asset/Pictures/Icons/card.png';
@@ -101,27 +108,29 @@ function AboutUs() {
           <span className="w-full lg:w-[90%] flex flex-col lg:text-3xl  text-lg font-black text-start  items-start  justify-start h-auto lg:gap-y-4 ">
             شهر کراد
           </span>
-          <p
+          {/* <p
             className="w-full  flex flex-col lg:text-base   text-sm font-bold text-justify  items-start  justify-start h-auto  "
             style={{ lineHeight: isMobile ? '20px' : '30px' }}>
             کرادفاندینگ یا تامین مالی جمعی فرصتی برای شریک شدن در سود شرکت‌ها و کسب و کارهای متفاوت
             است
-          </p>
+          </p> */}
           <p
             style={{ lineHeight: isMobile ? '25px' : '32px' }}
             className="w-full flex flex-col lg:text-base    text-sm  text-justify font-medium  items-start  justify-start h-auto gap-y-2  ">
-            شهرکراد، سکوی تامین مالی جمعی شرکت کارگزاری شهر است که با دریافت مجوز رسمی از فرابورس
-            سعی دارد در کنار تامین مالی از طریق انتشار اوراق برای شرکت های بزرگ، به تامین مالی شرکت
-            های کوچک و متوسط کمک نماید و سرمایه گذاران را در ارزش افزوده ایجاد شده از تولید شرکت ها
-            با نرخ هایی جذاب و اقتصادی شریک نماید. شهرکراد در مسیر رشد و توسعه شرکت‌های کوچک و متوسط
-            در کنار آن‌ها بوده و با ایجاد سابقه اعتباری از طریق تامین مالی جمعی امکان تامین مالی از
-            طریق انتشار اوراق را برای آن‌ها فراهم می‌نماید.
+            کارگزاری شهر بعنوان زیرمجموعه بانک شهر و شهرداری تهران با هدف ایجاد بستری شفاف و ایمن
+            برای سرمایه‌گذاران و راهی آسان و مطمئن برای سرمایه‌گذاری در کسب و کارهای متوسط و کوچک
+            سکوی تامین مالی جمعی شهر کراد را تاسیس نموده است. این سکو با جذب سرمایه‌های خرد
+            سرمایه‌گذاران و فراهم کردن بستری برای کسب بازدهی و سودپیش‌بینی شده مناسب، به جذب سرمایه
+            برای سرمایه‌پذیران کمک می‌کند و مسیری برای مشارکت بیشتر در رشد و پیشرفت کسب و کارها
+            می‌باشد. این سکو تحت نظارت شرکت فرابورس ایران بوده و به عنوان کارگزار سرمایه‌گذاران،
+            پیگیری و نظارت کامل جهت دریافت سود پیش‌بینی شده و اصل سرمایه سرمایه‌گذاران را خواهد
+            داشت.
           </p>
         </div>
         {/*  picture  */}
         <img src={handCoin} className="lg:w-[45%] w-full lg:h-[420px] h-[250px] rounded-large " />
       </div>
-      <div className=" w-full flex flex-col items-center justify-center h-auto gap-y-10 lg:pt-28 ">
+      {/* <div className=" w-full flex flex-col items-center justify-center h-auto gap-y-10 lg:pt-28 ">
         {' '}
         <span className="lg:text-4xl text-lg  font-extrabold text-accent-1000  w-full text-center ">
           {' '}
@@ -148,7 +157,7 @@ function AboutUs() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <div className=" w-full flex flex-col items-center justify-center h-auto gap-y-10 lg:pt-28 ">
         {' '}
         <span className="lg:text-4xl text-lg  font-extrabold text-accent-1000  w-full text-center ">
@@ -236,23 +245,23 @@ function AboutUs() {
           <div className="lg:w-[80%] w-full flex flex-col justify-center items-start gap-y-5">
             <span className="w-auto lg:text-lg text-base font-bold">اطلاعات حساب شهر کراد</span>
             <div className="w-full flex flex-wrap items-center justify-start gap-4  font-medium text-base">
-              <span>بانک: - ایران</span>
-              <span>شعبه: </span>
+              <span>بانک: {BankAccountInfos?.bankName}</span>
+              <span>شعبه: {BankAccountInfos?.branchName}</span>
               <span>
                 شماره حساب:{' '}
                 <button
-                  onClick={() => handleCopy('accountNumber', '----')}
+                  onClick={() => handleCopy('accountNumber', BankAccountInfos?.accountNumber)}
                   className="w-auto text-nowrap text-accent-1000 hover:font-bold hover:underline underline-offset-4   ">
-                  {copyStatus?.accountNumber == true ? 'کپی شد !' : '----'}
+                  {copyStatus?.accountNumber == true ? 'کپی شد !' : BankAccountInfos?.accountNumber}
                 </button>
               </span>
               <span>
                 شماره شبا:{' '}
                 <button
-                  onClick={() => handleCopy('iban', '----')}
+                  onClick={() => handleCopy('iban', BankAccountInfos?.iban)}
                   className="w-auto text-nowrap text-accent-1000 hover:font-bold hover:underline underline-offset-4   ">
                   {' '}
-                  {copyStatus?.iban == true ? 'کپی شد !' : '----'}
+                  {copyStatus?.iban == true ? 'کپی شد !' : BankAccountInfos?.iban}
                 </button>
               </span>
             </div>
