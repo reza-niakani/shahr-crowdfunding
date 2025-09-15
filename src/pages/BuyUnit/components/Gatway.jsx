@@ -46,7 +46,6 @@ function Gatway({ setStep, data, amount, showName }) {
   // plan_details/1?payId=11
   const CreateInvestorOrder = async () => {
     setIsLoading(true);
-
     try {
       const res = await Axios.post('/Orders/investor/Create', {
         investmentPlanId: data?.id,

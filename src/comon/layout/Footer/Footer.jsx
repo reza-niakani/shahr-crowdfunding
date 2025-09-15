@@ -108,7 +108,7 @@ function Footer() {
           {/* links  */}
           <div className="w-full flex flex-col lg:flex-row lg:justify-start  lg:gap-x-10 justify-start lg:items-start items-center gap-y-3">
             {/* Investing Funds */}
-            <div className="lg:w-auto w-full flex flex-col gap-y-3 items-center">
+            {/* <div className="lg:w-auto w-full flex flex-col gap-y-3 items-center">
               {isMobile ? (
                 <AccordionFaqModel
                   component={true}
@@ -152,7 +152,7 @@ function Footer() {
                   </div>
                 </>
               )}
-            </div>
+            </div> */}
             {/* services */}
             <div className="lg:w-auto w-full flex flex-col gap-y-3 items-center">
               {isMobile ? (

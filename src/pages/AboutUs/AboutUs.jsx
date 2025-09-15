@@ -130,7 +130,7 @@ function AboutUs() {
         {/*  picture  */}
         <img src={handCoin} className="lg:w-[45%] w-full lg:h-[420px] h-[250px] rounded-large " />
       </div>
-      {/* <div className=" w-full flex flex-col items-center justify-center h-auto gap-y-10 lg:pt-28 ">
+      <div className=" w-full flex flex-col items-center justify-center h-auto gap-y-10 lg:pt-28 ">
         {' '}
         <span className="lg:text-4xl text-lg  font-extrabold text-accent-1000  w-full text-center ">
           {' '}
@@ -157,7 +157,7 @@ function AboutUs() {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
       <div className=" w-full flex flex-col items-center justify-center h-auto gap-y-10 lg:pt-28 ">
         {' '}
         <span className="lg:text-4xl text-lg  font-extrabold text-accent-1000  w-full text-center ">
