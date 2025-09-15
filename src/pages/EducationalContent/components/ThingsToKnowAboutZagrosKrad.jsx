@@ -18,7 +18,7 @@ function ThingsToKnowAboutZagrosKrad() {
           بازگشت
         </button>
       </div>
-      <h1 className="text-2xl font-bold text-accent-700">دانستنی ها در شهرکراد</h1>
+      <h1 className="text-2xl font-bold text-accent-700">دانستنی ها در لوتوس کراد</h1>
 
       <img src={know} className="w-[90%] object-contain h-[300px]" />
       <section className="space-y-4 w-[95%]">

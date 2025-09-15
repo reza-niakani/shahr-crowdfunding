@@ -99,7 +99,7 @@ function PlanCard({ data, innerCard = false, isSlider = false }) {
         </div>
 
         {/* <span className="text-xs w-[90%] text-start text-gray-900 font-bold">نهاد مالی </span> */}
-        <div className="text-xs w-[95%] text-start text-gray-900 font-medium  rounded-md ">
+        {/* <div className="text-xs w-[95%] text-start text-gray-900 font-medium  rounded-md ">
           {' '}
           سود پیش‌بینی شده طرح:{' '}
           <span className="text-accent-1000 font-bold">
@@ -109,7 +109,7 @@ function PlanCard({ data, innerCard = false, isSlider = false }) {
               'نامشخص'}
             %
           </span>{' '}
-        </div>
+        </div> */}
         <div className="text-xs w-[95%] text-start text-gray-900 font-medium  rounded-md ">
           {' '}
           مواعد پرداخت سود پیش بینی شده :{' '}

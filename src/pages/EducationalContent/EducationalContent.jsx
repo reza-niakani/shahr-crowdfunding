@@ -1,10 +1,15 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import Thingknow from 'asset/Pictures/Images/Thingknow.png';
 import Keyword from 'asset/Pictures/Images/Keyword.png';
 import ThingsToKnowAboutZagrosKrad from './components/ThingsToKnowAboutZagrosKrad';
 import CrowdfundingKeywords from './components/CrowdfundingKeywords';
 import { useNavigate, useParams } from 'react-router-dom';
+import liquidity from 'asset/Pictures/Images/liquidity.png';
+import risk from 'asset/Pictures/Images/risk.png';
+import disADandAD from 'asset/Pictures/Images/disADandAD.png';
+import Liquidity from './components/Liquidity';
+import Risk from './components/Risk';
+import DisADandAD from './components/DisADandAD';
 
 function EducationalContent() {
   const { id } = useParams();
@@ -13,13 +18,20 @@ function EducationalContent() {
   const EducationalContentEnum = [
     {
       id: 1,
-      title: 'دانستنی ها در شهرکراد',
+      title: 'دانستنی ها در لوتوس کراد',
       pic: Thingknow
     },
     {
       id: 2,
       title: 'کلید واژهای تامین مالی جمعی',
       pic: Keyword
+    },
+    { id: 3, pic: liquidity, title: 'نقدشونگی چیست و  نحو اجرای آن در تامین مالی جمعی  ' },
+    { id: 4, pic: risk, title: 'ریسک سرمایه گذاری در طرح های تامین مالی جمعی' },
+    {
+      id: 5,
+      pic: disADandAD,
+      title: 'معایب و مزایای تامین مالی جمعی در ایران؟'
     }
   ];
 
@@ -32,6 +44,12 @@ function EducationalContent() {
         return { status: true, component: <ThingsToKnowAboutZagrosKrad /> };
       case 2:
         return { status: true, component: <CrowdfundingKeywords /> };
+      case 3:
+        return { status: true, component: <Liquidity /> };
+      case 4:
+        return { status: true, component: <Risk /> };
+      case 5:
+        return { status: true, component: <DisADandAD /> };
       default:
         return { status: false, component: null };
     }

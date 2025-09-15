@@ -10,6 +10,7 @@ import mainLogo from 'asset/Pictures/logo/CompanyMainLogo.svg';
 import alert from 'asset/Pictures/Icons/alertcircle.svg';
 import AccordionFaqModel from 'comon/Accordion/AccordionFaqModel';
 import farabors from 'asset/Pictures/Images/farabors.png';
+import enamad from 'asset/Pictures/logo/enamad.png';
 
 function Footer() {
   const { setModal } = useContext(DataContext);
@@ -262,6 +263,7 @@ function Footer() {
           </div>
         </div>
         <div className="w-full flex lg:justify-end justify-center  h-auto items-center ">
+          <img referrerpolicy="origin" src={enamad} alt="" />
           {/* <a
             referrerpolicy="origin"
             target="_blank"

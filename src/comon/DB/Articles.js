@@ -1,36 +1,36 @@
-/* eslint-disable no-unused-vars */
-import zareZade from 'asset/Pictures/Images/zarezade.png';
-import liquidity from 'asset/Pictures/Images/liquidity.png';
-import chartOne from 'asset/Pictures/Images/chartOne.png';
-import disADandAD from 'asset/Pictures/Images/disADandAD.png';
+import whatsCrowd from 'asset/Pictures/Images/whatsCrowd.svg';
+import howInvesting from 'asset/Pictures/Images/howInvesting.svg';
+import onlineInvesting from 'asset/Pictures/Images/onlineInvesting.svg';
+import definition from 'asset/Pictures/Images/crowdfundingDefine.svg';
 
 export const ArticlesEnum = [
   {
-    img: chartOne,
-    title: 'تامین مالی برای رشد اقتصادی',
-    description: 'از موضوعاتی که از ابتدای شکل گیری علم اقتصاد مورد توجه اقتصاددانان بوده،...',
-    rout: '/articles/article1',
-    date: ''
+    img: whatsCrowd,
+    title: 'قوانین تامین مالی جمعی در ایران ',
+    description:
+      'قوانین تأمین مالی جمعی در ایران؛ پشتوانه‌ای برای سرمایه‌گذاران و متقاضیان تأمین سرمایه',
+    rout: '/article1',
+    date: '1 تیر ماه 1404'
+  },
+  {
+    img: howInvesting,
+    title: 'تأمین مالی جمعی از گذشته تا امروز',
+    description: 'تأمین مالی جمعی از گذشته تا امروز؛ نگاهی به تاریخچه جهانی و مسیر توسعه در ایران',
+    rout: '/article2',
+    date: '5 خرداد ماه 1404'
+  },
+  {
+    img: onlineInvesting,
+    title: 'انواع روش‌های تأمین مالی جمعی',
+    description: 'معرفی روش سرمایه گذاری آنلاین با جزئیات',
+    rout: '/article3',
+    date: '24 تیر ماه 1403'
+  },
+  {
+    img: definition,
+    title: 'کرادفاندینگ چیست؟',
+    description: 'بررسی کامل مزایا، معایب و نقش آن در سبد سرمایه‌گذاری شما',
+    rout: '/article4',
+    date: '24 تیر ماه 1403'
   }
-  // {
-  //   img: liquidity,
-  //   title: 'نقدشونگی چیست و در تامین مالی جمعی به چه نحو اجر میگردد؟ ',
-  //   description: 'Liquidity  یا نقد شوندگی به معنای سرعت تبدیل یک دارایی به وجه نقد می‌باشد ',
-  //   rout: '/articles/article2',
-  //   date: ''
-  // },
-  // {
-  //   img: risk,
-  //   title: '	ریسک سرمایه گذاری در طرح های تامین مالی جمعی به چه نحو است؟',
-  //   description: 'ریسک جز لاینفک سرمایه‌گذاری است و سرمایه‌گذاران باید در نظر داشته باشند ',
-  //   rout: '/articles/article3',
-  //   date: ''
-  // },
-  // {
-  //   img: disADandAD,
-  //   title: 'معایب و مزایای تامین مالی جمعی در ایران؟',
-  //   description: 'سرمایه‌گذار و متقاضی سرمایه دو رکن بازار تامین مالی جمعی هستند ',
-  //   rout: '/articles/article4',
-  //   date: ''
-  // }
 ];
